@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include "Enemy.h"
+#include "Slingshot.h"
 
 /// <summary>
 ///Taken from the GoogleTest primer. 
@@ -9,6 +10,7 @@
 class EnemyTest : public testing::Test {
 public:
     std::unique_ptr<Enemy> enemy;
+
 protected:
     // You can remove any or all of the following functions if their bodies would
     // be empty.
@@ -28,7 +30,7 @@ protected:
     void SetUp() override {
         // Code here will be called immediately after the constructor (right
         // before each test).
-        enemy = std::make_unique<Enemy>(50); // All enemnies in this test suite start with 50 HP.
+        enemy = std::make_unique<Enemy>(50); // All enemnies in this test suite start with 50 HP
                     
     }
 
@@ -43,9 +45,9 @@ protected:
 //A single test, not a fixture. No setup is called.
 TEST(Enemy, First_test) {
     Enemy e(100);
-    EXPECT_GT(e.getHealth(), 100);
-    SUCCEED() << "Test test passed";
-    FAIL() << "Test didn't pass";
+    EXPECT_EQ(e.getHealth(), 100);
+    //SUCCEED() << "Test test passed";
+   // FAIL() << "Test didn't pass";
 }
 
 TEST_F(EnemyTest, LethalDamagePopsPig) {
@@ -53,7 +55,16 @@ TEST_F(EnemyTest, LethalDamagePopsPig) {
     EXPECT_TRUE(enemy->checkIfPopped());
 }
 
+TEST(SlingshotTest, tension_Test) {
+    Slingshot s;
+	EXPECT_EQ(s.getTension(), 0);
+}
+
 int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
+
 }
+
+
+

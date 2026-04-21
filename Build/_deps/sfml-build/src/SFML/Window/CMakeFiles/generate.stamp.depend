@@ -1,0 +1,5 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.30/Modules/FindOpenGL.cmake
+C:/Program Files/CMake/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.30/Modules/FindPackageMessage.cmake
+H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/sfml-src/src/SFML/Window/CMakeLists.txt
