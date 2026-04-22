@@ -10,14 +10,15 @@
 class EnemyTest : public testing::Test {
 public:
     std::unique_ptr<Enemy> enemy;
-
+  
 protected:
     // You can remove any or all of the following functions if their bodies would
     // be empty.
 
+
     EnemyTest() {
         // You can do set-up work for each test here.
-                    
+          
     }
 
     ~EnemyTest() override {
@@ -38,9 +39,40 @@ protected:
         // Code here will be called immediately after each test (right
         // before the destructor).
     }
-
+   
 
 };
+
+
+//class ParamTest : public::testing::TestWithParam<int> {
+//protected:
+//    ParamTest() = default;
+//    ~ParamTest() = default;
+//
+//    void SetUp() override {
+//        // Code here will be called immediately after the constructor 
+//    }
+//
+//    void TearDown() override {
+//    }
+//};
+//TEST_P(ParamTest, SimpleTest) {
+//    int i_test = GetParam();
+//    std::cout << "Param value:: " << i_test << std::endl;
+//    EXPECT_GT(i_test, 1);
+//}
+//INSTANTIATE_TEST_SUITE_P(
+//    Simple,
+//    ParamTest, ::testing::Values(1, 2, 3, 4, 5)
+//);
+//
+
+
+
+
+
+
+
 
 //A single test, not a fixture. No setup is called.
 TEST(Enemy, First_test) {
@@ -55,10 +87,28 @@ TEST_F(EnemyTest, LethalDamagePopsPig) {
     EXPECT_TRUE(enemy->checkIfPopped());
 }
 
+TEST(EnemyTest1, XPosition_Test) {
+	Enemy e(0);
+	EXPECT_EQ(e.getX(), 0);
+}
+
+TEST(EnemyTest2, YPosition_Test) {
+    Enemy e(0);
+    EXPECT_EQ(e.getY(), 0);
+}
+
 TEST(SlingshotTest, tension_Test) {
     Slingshot s;
 	EXPECT_EQ(s.getTension(), 0);
 }
+
+TEST(SlingshotTest, pullBack_Test) {
+    Slingshot s;
+    EXPECT_TRUE(s.pullBack(30));
+    EXPECT_EQ(s.getTension(), 30);
+}
+
+
 
 int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);

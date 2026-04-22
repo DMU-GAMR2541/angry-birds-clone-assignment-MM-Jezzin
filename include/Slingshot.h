@@ -24,7 +24,7 @@ public:
         i_tension = (i_tension + amount > MAX_TENSION) ? MAX_TENSION : i_tension + amount;
         return true;
     }
-
+    
     int getTension() const { return i_tension; }
     std::string getBirdType() const { return str_birdType; }
 
