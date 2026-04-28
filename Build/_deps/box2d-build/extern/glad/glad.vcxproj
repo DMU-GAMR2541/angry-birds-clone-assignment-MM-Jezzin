@@ -22,9 +22,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{43DECA82-F4B4-3E66-AC37-DBD5337ACBA6}</ProjectGuid>
+    <ProjectGuid>{2CEA5B85-5F6B-3088-B2C6-4EF0C04A9FA5}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>glad</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -59,37 +59,43 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\bin\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\bin\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">glad.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">glad</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\bin\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\bin\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">glad.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">glad</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\bin\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\bin\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">glad.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">glad</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\bin\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\bin\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">glad.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">glad</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>
       </ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
       <MinimalRebuild></MinimalRebuild>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
@@ -97,10 +103,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -113,17 +119,23 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
       <ExceptionHandling>
       </ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <MinimalRebuild></MinimalRebuild>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
@@ -133,10 +145,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -149,17 +161,23 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
       <ExceptionHandling>
       </ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <MinimalRebuild></MinimalRebuild>
       <Optimization>MinSpace</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
@@ -169,10 +187,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -185,18 +203,24 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>
       </ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <MinimalRebuild></MinimalRebuild>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
@@ -204,10 +228,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -219,11 +243,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-src/extern/glad/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-src/extern/glad/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin -BH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/extern/glad/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin" "-BC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build" --check-stamp-file "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/extern/glad/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -232,11 +256,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\extern\glad\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\extern\glad\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-src/extern/glad/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-src/extern/glad/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin -BH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/extern/glad/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin" "-BC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build" --check-stamp-file "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/extern/glad/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -245,11 +269,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\extern\glad\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\extern\glad\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-src/extern/glad/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-src/extern/glad/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin -BH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/extern/glad/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin" "-BC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build" --check-stamp-file "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/extern/glad/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -258,11 +282,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\extern\glad\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\extern\glad\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-src/extern/glad/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-src/extern/glad/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin -BH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/extern/glad/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin" "-BC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build" --check-stamp-file "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/extern/glad/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -271,18 +295,19 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\extern\glad\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\extern\glad\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\src\gl.c" />
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include\glad\gl.h" />
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include\KHR\khrplatform.h" />
+    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\src\gl.c" />
+    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include\glad\gl.h" />
+    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glad\include\KHR\khrplatform.h" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\ZERO_CHECK.vcxproj">
-      <Project>{D8B84AEF-2C78-33E3-8827-DD2806033E6C}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\ZERO_CHECK.vcxproj">
+      <Project>{6789B9E5-DC57-3C27-B108-EFCF5B99D8F0}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

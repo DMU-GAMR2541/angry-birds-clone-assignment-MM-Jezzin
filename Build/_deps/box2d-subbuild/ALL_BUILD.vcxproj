@@ -13,9 +13,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{CEBD96AD-B7BE-3B8C-BFCA-BA89040AC974}</ProjectGuid>
+    <ProjectGuid>{49801B83-3399-323A-8A37-A4D5114EBB10}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -49,11 +49,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-subbuild\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-subbuild\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-subbuild/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-subbuild/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-subbuild -BH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-subbuild --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-subbuild/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-subbuild" "-BC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-subbuild" --check-stamp-file "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-subbuild/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -61,22 +61,23 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-subbuild\CMakeFiles\3.30.1\CMakeSystem.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-subbuild\box2d-populate-prefix\tmp\box2d-populate-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-subbuild\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\WindowsPaths.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-subbuild\CMakeFiles\4.3.2\CMakeSystem.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-subbuild\box2d-populate-prefix\tmp\box2d-populate-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-subbuild\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-subbuild\ZERO_CHECK.vcxproj">
-      <Project>{86108B65-1C5B-3A93-8A31-69B28322BDED}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-subbuild\ZERO_CHECK.vcxproj">
+      <Project>{45F7ECB3-889D-3DE1-A057-A8B299D63147}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-subbuild\box2d-populate.vcxproj">
-      <Project>{04DD4163-1ABF-3D62-8EF9-7192F28A533A}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-subbuild\box2d-populate.vcxproj">
+      <Project>{22E17720-22E1-34C7-A75D-FEB2EAE4FB04}</Project>
       <Name>box2d-populate</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

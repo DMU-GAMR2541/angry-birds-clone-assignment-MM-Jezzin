@@ -1,27 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\src\main.cpp">
+    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\include\Enemy.h">
+    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\include\Enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\include\Slingshot.h">
+    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\include\Slingshot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NonInteractable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Catapult.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bird.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pig.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{A2D5B117-79EF-34DA-834C-F01C5C53CE05}</UniqueIdentifier>
+      <UniqueIdentifier>{E2588E5E-484A-3C83-8988-B073986B1333}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{985123E5-3024-351A-BEEC-8493EDD70559}</UniqueIdentifier>
+      <UniqueIdentifier>{AA94611C-BA13-380D-9C92-0FFFEFEED465}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

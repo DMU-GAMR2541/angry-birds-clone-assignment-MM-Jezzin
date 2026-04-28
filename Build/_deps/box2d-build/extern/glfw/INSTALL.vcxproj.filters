@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\473c06e95cb21c1d5b3b4c2fcd064aac\INSTALL_force.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\94df38b03ddaa323dca742ba6c264eb6\INSTALL_force.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{9596EA01-4CEE-3560-A48D-F83163BB5A96}</UniqueIdentifier>
+      <UniqueIdentifier>{EBAFDF3A-6A3C-31B4-BB69-68FE38D20FE7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

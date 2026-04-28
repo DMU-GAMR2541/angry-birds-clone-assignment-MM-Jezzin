@@ -1,93 +1,93 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\context.c">
+    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\context.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\init.c">
+    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\init.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\input.c">
+    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\input.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\monitor.c">
+    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\monitor.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\vulkan.c">
+    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\vulkan.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\window.c">
+    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\window.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\win32_init.c">
+    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\win32_init.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\win32_joystick.c">
+    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\win32_joystick.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\win32_monitor.c">
+    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\win32_monitor.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\win32_time.c">
+    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\win32_time.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\win32_thread.c">
+    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\win32_thread.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\win32_window.c">
+    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\win32_window.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\wgl_context.c">
+    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\wgl_context.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\egl_context.c">
+    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\egl_context.c">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\osmesa_context.c">
+    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\osmesa_context.c">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\internal.h">
+    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\internal.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\mappings.h">
+    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\mappings.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\include\GLFW\glfw3.h">
+    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\include\GLFW\glfw3.h">
       <Filter>include\GLFW</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\include\GLFW\glfw3native.h">
+    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\include\GLFW\glfw3native.h">
       <Filter>include\GLFW</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\win32_platform.h">
+    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\win32_platform.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\win32_joystick.h">
+    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\win32_joystick.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\wgl_context.h">
+    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\wgl_context.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\egl_context.h">
+    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\egl_context.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\osmesa_context.h">
+    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\src\osmesa_context.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-src\extern\glfw\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="include">
-      <UniqueIdentifier>{A9058402-07BE-3121-8542-0DFE22B1BAA2}</UniqueIdentifier>
+      <UniqueIdentifier>{244A3A3B-8052-34DB-97D7-E82734F6D1F0}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\GLFW">
-      <UniqueIdentifier>{8038A786-DDC0-3314-82CE-8AC090CD735C}</UniqueIdentifier>
+      <UniqueIdentifier>{44EA875D-0CB7-3775-8BF7-E7FCDC89F1BC}</UniqueIdentifier>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{2497BC24-31CE-37AE-87E8-C1B1F402EAA3}</UniqueIdentifier>
+      <UniqueIdentifier>{86426FA2-CD07-318A-8100-9DBFE73698DB}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

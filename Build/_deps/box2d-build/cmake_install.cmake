@@ -1,4 +1,4 @@
-# Install script for directory: H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-src
+# Install script for directory: C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,18 +33,24 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-src/include/box2d")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-src/include/box2d")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/src/cmake_install.cmake")
-  include("H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/unit-test/cmake_install.cmake")
-  include("H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/extern/glad/cmake_install.cmake")
-  include("H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/extern/glfw/cmake_install.cmake")
-  include("H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/extern/imgui/cmake_install.cmake")
-  include("H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/extern/sajson/cmake_install.cmake")
-  include("H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/testbed/cmake_install.cmake")
+  include("C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/src/cmake_install.cmake")
+  include("C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/unit-test/cmake_install.cmake")
+  include("C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/extern/glad/cmake_install.cmake")
+  include("C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/extern/glfw/cmake_install.cmake")
+  include("C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/extern/imgui/cmake_install.cmake")
+  include("C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/extern/sajson/cmake_install.cmake")
+  include("C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/testbed/cmake_install.cmake")
 
 endif()
 
+string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+       "${CMAKE_INSTALL_MANIFEST_FILES}")
+if(CMAKE_INSTALL_LOCAL_ONLY)
+  file(WRITE "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/box2d-build/install_local_manifest.txt"
+     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
+endif()

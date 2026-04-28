@@ -10,9 +10,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{24C14A94-6699-3384-880D-108D2CE34831}</ProjectGuid>
+    <ProjectGuid>{661148BB-4BDA-301C-B74E-702CE8D1FEA0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>googletest-populate</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -46,13 +46,13 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\66d4c3451727d84eb63fc7a824edc2a3\googletest-populate-mkdir.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\f686fd356bdbef60ebfd1e5b3fd9650a\googletest-populate-mkdir.rule">
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Creating directories for 'googletest-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-mkdirs.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-mkdirs.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-mkdir
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-mkdir"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -61,25 +61,25 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-mkdir</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-mkdir</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\66d4c3451727d84eb63fc7a824edc2a3\googletest-populate-download.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\f686fd356bdbef60ebfd1e5b3fd9650a\googletest-populate-download.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing download step (download, verify and extract) for 'googletest-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps
+cd "C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps"
 if %errorlevel% neq 0 goto :cmEnd
-H:
+C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/download-googletest-populate.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/download-googletest-populate.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/verify-googletest-populate.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/verify-googletest-populate.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/extract-googletest-populate.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/extract-googletest-populate.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-download
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-download"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -87,18 +87,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\download-googletest-populate.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\googletest-populate-urlinfo.txt;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-download</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\download-googletest-populate.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\googletest-populate-urlinfo.txt;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-download</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\66d4c3451727d84eb63fc7a824edc2a3\googletest-populate-update.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\f686fd356bdbef60ebfd1e5b3fd9650a\googletest-populate-update.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No update step for 'googletest-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-update
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-update"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -106,18 +106,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\googletest-populate-update-info.txt;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-download;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-update</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\googletest-populate-update-info.txt;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-update</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\66d4c3451727d84eb63fc7a824edc2a3\googletest-populate-patch.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\f686fd356bdbef60ebfd1e5b3fd9650a\googletest-populate-patch.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No patch step for 'googletest-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-patch
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-patch"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -125,23 +125,23 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\googletest-populate-patch-info.txt;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-update;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-patch</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\googletest-populate-patch-info.txt;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-patch</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\66d4c3451727d84eb63fc7a824edc2a3\googletest-populate-configure.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\f686fd356bdbef60ebfd1e5b3fd9650a\googletest-populate-configure.rule">
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No configure step for 'googletest-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build
+cd "C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build"
 if %errorlevel% neq 0 goto :cmEnd
-H:
+C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-configure
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-configure"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -149,23 +149,23 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\tmp\googletest-populate-cfgcmd.txt;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-patch;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-configure</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\tmp\googletest-populate-cfgcmd.txt;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-configure</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\66d4c3451727d84eb63fc7a824edc2a3\googletest-populate-build.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\f686fd356bdbef60ebfd1e5b3fd9650a\googletest-populate-build.rule">
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No build step for 'googletest-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build
+cd "C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build"
 if %errorlevel% neq 0 goto :cmEnd
-H:
+C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-build
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-build"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -173,23 +173,23 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-configure;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-build</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-build</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\66d4c3451727d84eb63fc7a824edc2a3\googletest-populate-install.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\f686fd356bdbef60ebfd1e5b3fd9650a\googletest-populate-install.rule">
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No install step for 'googletest-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build
+cd "C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build"
 if %errorlevel% neq 0 goto :cmEnd
-H:
+C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-install
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-install"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -197,23 +197,23 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-install</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-install</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\66d4c3451727d84eb63fc7a824edc2a3\googletest-populate-test.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\f686fd356bdbef60ebfd1e5b3fd9650a\googletest-populate-test.rule">
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No test step for 'googletest-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build
+cd "C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build"
 if %errorlevel% neq 0 goto :cmEnd
-H:
+C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-test
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-test"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -221,21 +221,21 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-install;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-test</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-install;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-test</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\c2d6c5e10b3612f0094c2fc44fe65f2b\googletest-populate-complete.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\24423e70415d40b1a531386fc216b5c7\googletest-populate-complete.rule">
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Completed 'googletest-populate'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/CMakeFiles/Debug
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/CMakeFiles/Debug"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/CMakeFiles/Debug/googletest-populate-complete
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/CMakeFiles/Debug/googletest-populate-complete"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-done
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/Debug/googletest-populate-done"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -243,13 +243,13 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-install;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-mkdir;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-download;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-update;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-patch;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-configure;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-build;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-test;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\Debug\googletest-populate-complete</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-install;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-mkdir;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-download;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-update;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-patch;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-configure;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-build;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\src\googletest-populate-stamp\Debug\googletest-populate-test;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\Debug\googletest-populate-complete</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\da5db9c3df6ff481d0b841fd926bd8e8\googletest-populate.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\2e13d9a987e58f07527d1087c8fa87f6\googletest-populate.rule">
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
@@ -259,18 +259,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\Debug\googletest-populate-complete;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\googletest-populate</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\Debug\googletest-populate-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\googletest-populate</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild -BH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild" "-BC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild" --check-stamp-file "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-subbuild/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -278,18 +278,19 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\download.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\3.30.1\CMakeSystem.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\tmp\googletest-populate-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\download.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\WindowsPaths.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\4.3.2\CMakeSystem.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\googletest-populate-prefix\tmp\googletest-populate-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\googletest-populate">
+    <None Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\googletest-populate">
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\ZERO_CHECK.vcxproj">
-      <Project>{8E25A482-9B17-3C72-A3D4-255CB312081F}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\ZERO_CHECK.vcxproj">
+      <Project>{D0932649-C714-3C62-A2D0-5F2025F89F5A}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

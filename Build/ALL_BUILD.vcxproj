@@ -25,9 +25,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{AA0D95D3-D37D-3AEB-BF7B-224400B5010A}</ProjectGuid>
+    <ProjectGuid>{88CC4B9F-E6BA-3D39-B6AF-9EC2F03EA204}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -108,11 +108,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin -BH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin" "-BC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build" --check-stamp-file "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -120,12 +120,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\3.30.1\CMakeCCompiler.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\3.30.1\CMakeCXXCompiler.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\3.30.1\CMakeRCCompiler.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\3.30.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\WindowsPaths.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\4.3.2\CMakeCCompiler.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\4.3.2\CMakeCXXCompiler.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\4.3.2\CMakeRCCompiler.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\4.3.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin -BH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin" "-BC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build" --check-stamp-file "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -133,12 +133,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\3.30.1\CMakeCCompiler.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\3.30.1\CMakeCXXCompiler.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\3.30.1\CMakeRCCompiler.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\3.30.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\WindowsPaths.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\4.3.2\CMakeCCompiler.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\4.3.2\CMakeCXXCompiler.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\4.3.2\CMakeRCCompiler.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\4.3.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin -BH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin" "-BC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build" --check-stamp-file "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -146,12 +146,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\3.30.1\CMakeCCompiler.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\3.30.1\CMakeCXXCompiler.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\3.30.1\CMakeRCCompiler.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\3.30.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\WindowsPaths.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\4.3.2\CMakeCCompiler.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\4.3.2\CMakeCXXCompiler.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\4.3.2\CMakeRCCompiler.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\4.3.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin -BH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin" "-BC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build" --check-stamp-file "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -159,94 +159,95 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\3.30.1\CMakeCCompiler.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\3.30.1\CMakeCXXCompiler.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\3.30.1\CMakeRCCompiler.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\3.30.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FetchContent.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FetchContent\CMakeLists.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\FindGit.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\WindowsPaths.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\4.3.2\CMakeCCompiler.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\4.3.2\CMakeCXXCompiler.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\4.3.2\CMakeRCCompiler.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\4.3.2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\ZERO_CHECK.vcxproj">
-      <Project>{D8B84AEF-2C78-33E3-8827-DD2806033E6C}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\ZERO_CHECK.vcxproj">
+      <Project>{6789B9E5-DC57-3C27-B108-EFCF5B99D8F0}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\Annoyed_Flocks.vcxproj">
-      <Project>{A92AE373-B832-3C90-959F-07423E8A323D}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\Annoyed_Flocks.vcxproj">
+      <Project>{D6B07861-5ED7-3818-80EA-405B62C19031}</Project>
       <Name>Annoyed_Flocks</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\RunUnitTests.vcxproj">
-      <Project>{D5EA3F15-62D3-396C-AF7D-067ADE8D0F24}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\RunUnitTests.vcxproj">
+      <Project>{ED7234C9-4B32-39AB-BE6D-B15390D60DB8}</Project>
       <Name>RunUnitTests</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\src\box2d.vcxproj">
-      <Project>{80873244-6892-3628-8C21-88BCFC713B4D}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\src\box2d.vcxproj">
+      <Project>{DFE4A3A6-2D7C-3A7F-B728-7E1373685E5C}</Project>
       <Name>box2d</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\extern\glad\glad.vcxproj">
-      <Project>{43DECA82-F4B4-3E66-AC37-DBD5337ACBA6}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\extern\glad\glad.vcxproj">
+      <Project>{2CEA5B85-5F6B-3088-B2C6-4EF0C04A9FA5}</Project>
       <Name>glad</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\extern\glfw\glfw.vcxproj">
-      <Project>{68B245EA-6A2A-3D01-A6B2-99D0D00B0352}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\extern\glfw\glfw.vcxproj">
+      <Project>{79267C44-4051-3A6B-AB99-F35124BC0738}</Project>
       <Name>glfw</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build\googlemock\gmock.vcxproj">
-      <Project>{ACDDE5F6-9AC3-37A5-B03D-79F60B812563}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build\googlemock\gmock.vcxproj">
+      <Project>{D2AC7936-C03E-3421-8254-F28B761C0773}</Project>
       <Name>gmock</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build\googlemock\gmock_main.vcxproj">
-      <Project>{A55069E2-A8BD-38A7-8D26-03F2674A8164}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build\googlemock\gmock_main.vcxproj">
+      <Project>{800826DF-1B2B-3C66-AF9D-9106FE77AE41}</Project>
       <Name>gmock_main</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build\googletest\gtest.vcxproj">
-      <Project>{FC463D00-3F14-3A69-80E8-2EE3B9470E10}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build\googletest\gtest.vcxproj">
+      <Project>{268A8D25-3C30-3E19-9FC5-F19C3C03B3D0}</Project>
       <Name>gtest</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build\googletest\gtest_main.vcxproj">
-      <Project>{91746306-537B-3698-9DF3-C90D232BB23F}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build\googletest\gtest_main.vcxproj">
+      <Project>{E18E1DEF-D00A-35E5-934C-9D2E26CD28FF}</Project>
       <Name>gtest_main</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\extern\imgui\imgui.vcxproj">
-      <Project>{8FFFB4A3-E3E3-391D-B2C2-221503D56F8F}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\extern\imgui\imgui.vcxproj">
+      <Project>{C0A3868F-8ACC-3DAC-A948-C504D6BFA5B9}</Project>
       <Name>imgui</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\extern\sajson\sajson.vcxproj">
-      <Project>{DC07981E-5FC4-3BB4-84EB-9A2034D37966}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\extern\sajson\sajson.vcxproj">
+      <Project>{18F1378E-97F8-39F8-B271-EB59E59A520D}</Project>
       <Name>sajson</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-build\src\SFML\Audio\sfml-audio.vcxproj">
-      <Project>{11C25DCA-15C8-313F-A339-963342BE2F5F}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-build\src\SFML\Audio\sfml-audio.vcxproj">
+      <Project>{69165C13-7319-354D-BA72-59CFDACB7947}</Project>
       <Name>sfml-audio</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-build\src\SFML\Graphics\sfml-graphics.vcxproj">
-      <Project>{DDBA0794-8E16-3941-875C-7A0C0393D380}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-build\src\SFML\Graphics\sfml-graphics.vcxproj">
+      <Project>{5A80D70F-0873-3213-8F2E-B11F481EB289}</Project>
       <Name>sfml-graphics</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-build\src\SFML\Main\sfml-main.vcxproj">
-      <Project>{C09D2DAB-DB74-3F51-8C0B-99DF2451451F}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-build\src\SFML\Main\sfml-main.vcxproj">
+      <Project>{B8F42360-1AD3-35C0-BB65-AAF1ED42B840}</Project>
       <Name>sfml-main</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-build\src\SFML\Network\sfml-network.vcxproj">
-      <Project>{BFA1BCA0-B103-3360-A5BA-8F7DAA60A466}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-build\src\SFML\Network\sfml-network.vcxproj">
+      <Project>{5409A975-3793-3C83-BFFA-158EC61EF438}</Project>
       <Name>sfml-network</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-build\src\SFML\System\sfml-system.vcxproj">
-      <Project>{D54D3A92-DEB0-3452-B383-37507683EDA8}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-build\src\SFML\System\sfml-system.vcxproj">
+      <Project>{5EC3C186-C73D-363B-A2E4-1B5E438213E5}</Project>
       <Name>sfml-system</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-build\src\SFML\Window\sfml-window.vcxproj">
-      <Project>{67C3AEEC-8237-3175-B410-079D187ADF30}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-build\src\SFML\Window\sfml-window.vcxproj">
+      <Project>{8E74D6CE-DB4D-357C-9919-1380F021EBD8}</Project>
       <Name>sfml-window</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\testbed\testbed.vcxproj">
-      <Project>{A89724FD-ADF6-31CD-AB5F-38586FD3378E}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\testbed\testbed.vcxproj">
+      <Project>{351328B3-BD4F-3C83-91EE-77DCC7D339CC}</Project>
       <Name>testbed</Name>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\unit-test\unit_test.vcxproj">
-      <Project>{0BBA7083-57A0-3409-800E-972F3C5D9A2C}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\box2d-build\unit-test\unit_test.vcxproj">
+      <Project>{4F6C2E0C-C6A1-360E-93AA-405099C191F2}</Project>
       <Name>unit_test</Name>
     </ProjectReference>
   </ItemGroup>

@@ -13,9 +13,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{59E3FF64-8CC9-336B-B274-E8C4E902DF5D}</ProjectGuid>
+    <ProjectGuid>{6A341521-EBF5-37DA-AAF3-9A2BF2B3C3A0}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -49,11 +49,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-subbuild\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-subbuild\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/sfml-subbuild/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/sfml-subbuild/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/sfml-subbuild -BH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/sfml-subbuild --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/sfml-subbuild/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/sfml-subbuild" "-BC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/sfml-subbuild" --check-stamp-file "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/sfml-subbuild/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -61,22 +61,23 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.30\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-subbuild\CMakeFiles\3.30.1\CMakeSystem.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-subbuild\sfml-populate-prefix\tmp\sfml-populate-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-subbuild\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\gitclone.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\gitupdate.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-4.3\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\WindowsPaths.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-subbuild\CMakeFiles\4.3.2\CMakeSystem.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-subbuild\sfml-populate-prefix\tmp\sfml-populate-mkdirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-subbuild\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-subbuild\ZERO_CHECK.vcxproj">
-      <Project>{753FE1A9-B435-328E-BE30-3E9C12177A6A}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-subbuild\ZERO_CHECK.vcxproj">
+      <Project>{4A2C06E6-240F-338C-91A5-0A2FD371DF90}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-subbuild\sfml-populate.vcxproj">
-      <Project>{15AAEEED-43AF-3535-BE64-FBB889948B94}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\sfml-subbuild\sfml-populate.vcxproj">
+      <Project>{1018D3AC-11BF-375C-9CA2-DA4AA192CB1A}</Project>
       <Name>sfml-populate</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

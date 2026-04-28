@@ -22,9 +22,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{ACDDE5F6-9AC3-37A5-B03D-79F60B812563}</ProjectGuid>
+    <ProjectGuid>{D2AC7936-C03E-3421-8254-F28B761C0773}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>gmock</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
@@ -59,55 +59,60 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\lib\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\lib\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gmock.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">gmock</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\lib\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\lib\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gmock.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">gmock</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\lib\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\lib\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">gmock.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">gmock</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\lib\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\lib\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">gmock.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">gmock</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -J -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <BufferSecurityCheck>true</BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4251;4275;4702</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <MinimalRebuild></MinimalRebuild>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <SupportJustMyCode></SupportJustMyCode>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <TreatWarningAsError>true</TreatWarningAsError>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level4</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\lib\Debug\gmockpdb_debug_postfix-NOTFOUND.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\lib\Debug\gmockpdb_debug_postfix-NOTFOUND.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -120,21 +125,26 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -J -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck>true</BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
       <DisableSpecificWarnings>4251;4275;4702</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <MinimalRebuild></MinimalRebuild>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <SupportJustMyCode></SupportJustMyCode>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <TreatWarningAsError>true</TreatWarningAsError>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level4</WarningLevel>
@@ -142,15 +152,15 @@
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
-      <ProgramDataBaseFileName>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\lib\Release\gmock.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\lib\Release\gmock.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -163,21 +173,26 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -J -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck>true</BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
       <DisableSpecificWarnings>4251;4275;4702</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <MinimalRebuild></MinimalRebuild>
       <Optimization>MinSpace</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <SupportJustMyCode></SupportJustMyCode>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <TreatWarningAsError>true</TreatWarningAsError>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level4</WarningLevel>
@@ -185,15 +200,15 @@
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
       </DebugInformationFormat>
-      <ProgramDataBaseFileName>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\lib\MinSizeRel\gmock.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\lib\MinSizeRel\gmock.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -206,36 +221,41 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) -J -utf-8</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <BufferSecurityCheck>true</BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <DisableSpecificWarnings>4251;4275;4702</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <MinimalRebuild></MinimalRebuild>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <SupportJustMyCode></SupportJustMyCode>
       <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <TreatWarningAsError>true</TreatWarningAsError>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level4</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <ProgramDataBaseFileName>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\lib\RelWithDebInfo\gmock.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\lib\RelWithDebInfo\gmock.pdb</ProgramDataBaseFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_UNICODE;UNICODE;_WIN32;STRICT;WIN32_LEAN_AND_MEAN;GTEST_HAS_PTHREAD=0;_HAS_EXCEPTIONS=1;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\include;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -247,11 +267,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin -BH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin" "-BC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build" --check-stamp-file "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -259,12 +279,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindThreads.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\cmake\gmock.pc.in;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindThreads.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin -BH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin" "-BC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build" --check-stamp-file "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -272,12 +292,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindThreads.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\cmake\gmock.pc.in;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindThreads.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin -BH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin" "-BC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build" --check-stamp-file "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -285,12 +305,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindThreads.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\cmake\gmock.pc.in;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindThreads.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-src/googlemock/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin -BH:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build --check-stamp-file H:/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin" "-BC:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build" --check-stamp-file "C:/Users/Joseph Dalby/Documents/GitHub/angry-birds-clone-assignment-MM-Jezzin/Build/_deps/googletest-build/googlemock/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -298,18 +318,19 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.30\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.30\Modules\FindThreads.cmake;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\cmake\gmock.pc.in;H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindThreads.cmake;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\cmake\gmock.pc.in;C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\cmake\gmock_main.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-build\googlemock\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\src\gtest-all.cc" />
-    <ClCompile Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\src\gmock-all.cc" />
+    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googletest\src\gtest-all.cc" />
+    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-src\googlemock\src\gmock-all.cc" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="H:\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\ZERO_CHECK.vcxproj">
-      <Project>{D8B84AEF-2C78-33E3-8827-DD2806033E6C}</Project>
+    <ProjectReference Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\ZERO_CHECK.vcxproj">
+      <Project>{6789B9E5-DC57-3C27-B108-EFCF5B99D8F0}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
