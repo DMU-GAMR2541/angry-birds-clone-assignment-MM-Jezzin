@@ -413,16 +413,16 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\src\main.cpp" />
-    <ClInclude Include="Bird.h" />
+    <ClInclude Include="..\include\Bird.h" />
+    <ClInclude Include="..\include\Catapult.h" />
+    <ClInclude Include="..\include\DynamicObject.h" />
+    <ClInclude Include="..\include\GameObject.h" />
+    <ClInclude Include="..\include\NonInteractable.h" />
+    <ClInclude Include="..\include\Pig.h" />
+    <ClInclude Include="..\include\StaticObject.h" />
+    <ClInclude Include="..\include\UI.h" />
     <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\include\Enemy.h" />
     <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\include\Slingshot.h" />
-    <ClInclude Include="Catapult.h" />
-    <ClInclude Include="DynamicObject.h" />
-    <ClInclude Include="GameObject.h" />
-    <ClInclude Include="NonInteractable.h" />
-    <ClInclude Include="Pig.h" />
-    <ClInclude Include="StaticObject.h" />
-    <ClInclude Include="UI.h" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

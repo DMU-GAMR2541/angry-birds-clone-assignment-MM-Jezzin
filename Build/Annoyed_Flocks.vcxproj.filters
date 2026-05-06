@@ -12,28 +12,28 @@
     <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\include\Slingshot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GameObject.h">
+    <ClInclude Include="..\include\Bird.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="StaticObject.h">
+    <ClInclude Include="..\include\Catapult.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DynamicObject.h">
+    <ClInclude Include="..\include\DynamicObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NonInteractable.h">
+    <ClInclude Include="..\include\GameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="UI.h">
+    <ClInclude Include="..\include\NonInteractable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Catapult.h">
+    <ClInclude Include="..\include\Pig.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Bird.h">
+    <ClInclude Include="..\include\StaticObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Pig.h">
+    <ClInclude Include="..\include\UI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

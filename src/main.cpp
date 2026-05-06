@@ -1,6 +1,8 @@
 #include <SFML/Graphics.hpp>
 #include <box2d/box2d.h>
 #include <iostream>
+#include "Bird.h"
+
 
 int main() {
     // --- 1. WINDOW SETUP ---
@@ -86,6 +88,15 @@ int main() {
     sf::CircleShape sf_ballVisual(15.0f);
     sf_ballVisual.setOrigin(15.0f, 15.0f);
     sf_ballVisual.setFillColor(sf::Color::Yellow);
+
+    // Upcasting Test with Bird.h :)
+
+	Bird myBird; // Create an instance of Bird
+	DynamicObject* dynamicObj = &myBird; // Upcast Bird to DynamicObject
+	GameObject* gameObj = &myBird; // Upcast Bird to GameObject
+
+	gameObj->Update(); // Calls Bird's Update method due to polymorphism (hopefully)
+  
 
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {

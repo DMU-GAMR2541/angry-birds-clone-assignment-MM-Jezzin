@@ -7,4 +7,9 @@ class DynamicObject : public  virtual GameObject { // DynamicObject inherits fro
 public:
 	DynamicObject() = default; // Default constructor
 	virtual ~DynamicObject() = default; // Default destructor
+
+
+	void Update() override {
+		std::cout << "Dynamic Object Update" << std::endl; // Placeholder for update logic, can be overridden by derived classes to implement specific behavior.
+	}
 };
