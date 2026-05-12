@@ -15,20 +15,27 @@ DynamicObject::DynamicObject(std::string DynConstructor, sf::IntRect DynIntRect,
 
 		DynSprite.setOrigin(DynIntRect.width / 2.f, DynIntRect.height / 2.f); // Set the origin of the sprite to its center, which allows for proper rotation around the middle.
 		
+		//This calculates the size of the circle shape based on the average of the width and height of the texture rectangle, which is used to define the radius of the dynamic circle shape for physics simulation. The division by 4.0f is likely to convert the average size to a suitable radius for the physics simulation, as Box2D typically uses smaller units for its shapes.
+		float Size = (DynIntRect.width + DynIntRect.height) / 4.0f;
 		
-		
-		b2_dynamicCircle.m_radius = 0.5; // Set the radius of the dynamic circle shape for physics simulation
+		b2_dynamicCircle.m_radius = Size / SCALE; // Set the radius of the dynamic circle shape for physics simulation
 
 		b2_BodyDef.type = b2_dynamicBody; // Set the body type to dynamic, which means it will be affected by forces and collisions in the physics simulation
 		b2_BodyDef.position = DynStartPos;
 		b2_body = world.CreateBody(&b2_BodyDef); // Create the body in the Box2D world using the defined body definition
 
-		b2_fixtureDef.shape = &b2_dynamicCircle;
+		b2_fixtureDef.shape = &b2_dynamicCircle; // Set the shape of the fixture to the defined dynamic circle, which will be used for collision detection and response in the physics simulation
 		b2_fixtureDef.density = 1.0f;
 		b2_fixtureDef.friction = 0.3f;
 		b2_fixtureDef.restitution = 0.5f;
 
 		b2_body->CreateFixture(&b2_fixtureDef); // Create a fixture for the body using the defined fixture definition, which includes the shape, density, friction, and restitution properties
+
+		//void impulse(b2Vec2 b2_impulse, bool awake)
+		
+		//{
+		//	b2_body->ApplyLinearImpulseToCenter(b2_impulse, awake); //Adds impulse to an object
+		//};
 }
 
 void DynamicObject::render(sf::RenderWindow & GObjRenderWindow) {

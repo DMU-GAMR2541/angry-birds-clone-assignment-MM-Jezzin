@@ -113,13 +113,11 @@ int main() {
 	//Bird bird("../assets/Ang_Birds/Adapted_Birds.png", sf::IntRect(940, 196,80, 80), b2Vec2(250.0f / SCALE, 200.0f / SCALE), world, 1.0f, 3.0f, 0.5f); // Create a Bird instance with texture, sprite rectangle, and position
 	//list of birds and pigs
 	std::vector<std::unique_ptr<Bird>> Birds;
-
+    
 	std::vector<sf::IntRect>birdsprites = { sf::IntRect(903, 798, 47, 47),sf::IntRect(300, 752, 100, 95),sf::IntRect(0, 378, 40, 32) 
-	};
+	}; //These are the position and size of the different birds in the sprite sheet. We can use these to create multiple birds with different appearances. The sf::IntRect constructor takes four parameters: the x and y coordinates of the top-left corner of the rectangle, and the width and height of the rectangle. These rectangles define the portion of the sprite sheet that will be used for each bird's texture.
 
-
-	//We can use a loop to create multiple birds with different sprite rectangles and positions. For example, we can create 3 birds with different sprites and positions.
-	int xOffset = 100; 
+	int xOffset = 100; // This variable is used to increment the x position of each bird when creating multiple birds. It starts at 100 and is increased by 100 for each subsequent bird, ensuring that the birds are spaced apart horizontally when they are created.
 
 	for (const auto& spriteRect : birdsprites) {
 		Birds.push_back(std::make_unique<Bird>("../assets/Ang_Birds/Angry_Birds.png", spriteRect, b2Vec2((250.0f + xOffset) / SCALE, 200.0f / SCALE), world, 1.0f, 3.0f, 0.5f)); // Create a Bird instance with texture, sprite rectangle, and position
@@ -128,8 +126,20 @@ int main() {
 
 
     //Creates a pig
-    Pig PigEnemy("../assets/Ang_Birds/sprite_1.png", sf::IntRect(0, 0, 60, 52), b2Vec2(250.0f / SCALE, 200.0f / SCALE), world, 1.0f, 3.0f, 0.5f); // Create a Pig instance with texture, sprite rectangle, and position
+    //Pig PigEnemy("../assets/Ang_Birds/sprite_1.png", sf::IntRect(0, 0, 60, 52), b2Vec2(250.0f / SCALE, 200.0f / SCALE), world, 1.0f, 3.0f, 0.5f); // Create a Pig instance with texture, sprite rectangle, and position
+	//list of pigs
+	std::vector<std::unique_ptr<Pig>> Pigs;
 
+    
+	std::vector<sf::IntRect>pigsprites = { sf::IntRect(928, 447, 80, 80),sf::IntRect(733, 155, 110, 100),sf::IntRect(732, 856, 60, 45) };
+
+	xOffset = 0; // Reset xOffset for pigs
+
+	for (const auto& spriteRect : pigsprites) {
+		Pigs.push_back(std::make_unique<Pig>("../assets/Ang_Birds/Angry_Birds.png", spriteRect, b2Vec2((500.0f + xOffset) / SCALE, 200.0f / SCALE), world, 1.0f, 3.0f, 0.5f)); // Create a Pig instance with texture, sprite rectangle, and position
+		xOffset += 100; // Increment the xOffset for the next pig's position
+
+	}
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
         sf::Event event;
@@ -156,8 +166,10 @@ int main() {
         // Update Physics
         world.Step(1.0f / 60.0f, 8, 3);
 
-		PigEnemy.update(); // Update the Pig instance (if needed)
-		PigEnemy.UpdateSprite(); // Update the Pig's sprite position based on its physics body
+		for (auto& pig : Pigs) { // Loop through each Pig in the list and update it
+			pig->update(); // Update the Pig instance (if needed)
+			pig->UpdateSprite();
+		}
 		for (auto& bird : Birds) { // Loop through each Bird in the list and update it
            bird->update(); // Update the Bird instance (if needed)
            bird->UpdateSprite();
@@ -186,7 +198,11 @@ int main() {
         window.draw(sf_wallVisual);
         window.draw(sf_plankVisual);
         window.draw(sf_ballVisual);
-		PigEnemy.render(window); // Render the Pig instance
+		
+		for (auto& pig : Pigs) { // Loop through each Pig in the list and render it
+			pig->render(window); // Render the Pig instance
+		}
+
 		//bird.render(window); // Render the Bird instance
 		for (auto& bird : Birds) { // Loop through each Bird in the list and render it
 			bird->render(window); // Render the Bird instance
