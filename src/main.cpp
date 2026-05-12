@@ -2,11 +2,17 @@
 #include <box2d/box2d.h>
 #include <iostream>
 #include "Bird.h"
+#include "Pig.h"
+
+#include <filesystem>
+#include <list> // Include the list header for using std::list - the lists for the different birds and pigs :)
 
 
 int main() {
+
+    std::cout << std::filesystem::current_path() << std::endl;
     // --- 1. WINDOW SETUP ---
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Annoyed_Flocks");
+	sf::RenderWindow window(sf::VideoMode(800, 600), "Annoyed_Flocks"); // Create a window with the title "Annoyed_Flocks" and dimensions 800x600 pixels
     window.setFramerateLimit(60);
 
     //Box2D works in meters. SFML works in pixels.
@@ -89,14 +95,25 @@ int main() {
     sf_ballVisual.setOrigin(15.0f, 15.0f);
     sf_ballVisual.setFillColor(sf::Color::Yellow);
 
-    // Upcasting Test with Bird.h :)
 
-	Bird myBird; // Create an instance of Bird
-	DynamicObject* dynamicObj = &myBird; // Upcast Bird to DynamicObject
-	GameObject* gameObj = &myBird; // Upcast Bird to GameObject
 
-	gameObj->Update(); // Calls Bird's Update method due to polymorphism (hopefully)
+
   
+
+    //Adding physics to the sprites
+
+    b2Vec2 b2_pos;
+	b2BodyDef b2_BodyDef;
+	b2FixtureDef b2_fixtureDef;
+	b2Body* b2_body;
+
+	b2CircleShape b2_dynamicCircle;
+    
+	//Creates a bird
+	Bird Bird("../assets/Ang_Birds/Adapted_Birds.png", sf::IntRect(940, 196,80, 80), b2Vec2(250.0f / SCALE, 200.0f / SCALE), world, 1.0f, 3.0f, 0.5f); // Create a Bird instance with texture, sprite rectangle, and position
+
+    //Creates a pig
+    Pig PigEnemy("../assets/Ang_Birds/sprite_1.png", sf::IntRect(0, 0, 60, 52), b2Vec2(250.0f / SCALE, 200.0f / SCALE), world, 1.0f, 3.0f, 0.5f); // Create a Pig instance with texture, sprite rectangle, and position
 
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
@@ -105,7 +122,7 @@ int main() {
             if (event.type == sf::Event::Closed)
                 window.close();
 
-            // INPUT HANDLING: Press SPACE to launch
+			// INPUT HANDLING: Press SPACE to launchok the ball. We can apply an impulse to the ball to make it move. The impulse is a sudden force applied to an object, which changes its velocity. In Box2D, we can use the ApplyLinearImpulse function to apply an impulse to a body. The impulse is defined as a vector that specifies the direction and magnitude of the force. In this case, we want to apply an impulse in the positive X direction (to the right) and negative Y direction (upwards) to launch the ball towards the targets.
             if (event.type == sf::Event::KeyPressed) {
                 if (event.key.code == sf::Keyboard::Space) {
                     // Reset position of the ball so that it can be fired again from its original poisition.
@@ -123,6 +140,13 @@ int main() {
 
         // Update Physics
         world.Step(1.0f / 60.0f, 8, 3);
+
+		PigEnemy.update(); // Update the Pig instance (if needed)
+		PigEnemy.UpdateSprite(); // Update the Pig's sprite position based on its physics body
+
+		Bird.update(); // Update the Bird instance (if needed)
+		Bird.UpdateSprite(); // Update the Bird's sprite position based on its physics body
+
 
         //All of the visuals needs to be synced with the physics.
 
@@ -144,6 +168,8 @@ int main() {
         window.draw(sf_wallVisual);
         window.draw(sf_plankVisual);
         window.draw(sf_ballVisual);
+		PigEnemy.render(window); // Render the Pig instance
+		Bird.render(window); // Render the Bird instance
 
         window.display();
     }

@@ -11,7 +11,7 @@ private:
     /// </summary>
     int i_tension;
     std::string str_birdType;
-    const int MAX_TENSION = 100;
+    const int MAX_TENSION = 300;
 
 public:
     Slingshot() : i_tension(0), str_birdType("Red") {}
