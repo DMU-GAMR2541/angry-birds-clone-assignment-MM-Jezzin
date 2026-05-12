@@ -6,7 +6,7 @@
 
 #include <filesystem>
 #include <list> // Include the list header for using std::list - the lists for the different birds and pigs :)
-
+#include <vector>
 
 int main() {
 
@@ -107,10 +107,25 @@ int main() {
 	b2FixtureDef b2_fixtureDef;
 	b2Body* b2_body;
 
-	b2CircleShape b2_dynamicCircle;
+	//b2CircleShape b2_dynamicCircle;
     
 	//Creates a bird
-	Bird Bird("../assets/Ang_Birds/Adapted_Birds.png", sf::IntRect(940, 196,80, 80), b2Vec2(250.0f / SCALE, 200.0f / SCALE), world, 1.0f, 3.0f, 0.5f); // Create a Bird instance with texture, sprite rectangle, and position
+	//Bird bird("../assets/Ang_Birds/Adapted_Birds.png", sf::IntRect(940, 196,80, 80), b2Vec2(250.0f / SCALE, 200.0f / SCALE), world, 1.0f, 3.0f, 0.5f); // Create a Bird instance with texture, sprite rectangle, and position
+	//list of birds and pigs
+	std::vector<std::unique_ptr<Bird>> Birds;
+
+	std::vector<sf::IntRect>birdsprites = { sf::IntRect(903, 798, 47, 47),sf::IntRect(300, 752, 100, 95),sf::IntRect(0, 378, 40, 32) 
+	};
+
+
+	//We can use a loop to create multiple birds with different sprite rectangles and positions. For example, we can create 3 birds with different sprites and positions.
+	int xOffset = 100; 
+
+	for (const auto& spriteRect : birdsprites) {
+		Birds.push_back(std::make_unique<Bird>("../assets/Ang_Birds/Angry_Birds.png", spriteRect, b2Vec2((250.0f + xOffset) / SCALE, 200.0f / SCALE), world, 1.0f, 3.0f, 0.5f)); // Create a Bird instance with texture, sprite rectangle, and position
+            xOffset += 100; // Increment the xOffset for the next bird's position
+	}
+
 
     //Creates a pig
     Pig PigEnemy("../assets/Ang_Birds/sprite_1.png", sf::IntRect(0, 0, 60, 52), b2Vec2(250.0f / SCALE, 200.0f / SCALE), world, 1.0f, 3.0f, 0.5f); // Create a Pig instance with texture, sprite rectangle, and position
@@ -143,10 +158,13 @@ int main() {
 
 		PigEnemy.update(); // Update the Pig instance (if needed)
 		PigEnemy.UpdateSprite(); // Update the Pig's sprite position based on its physics body
+		for (auto& bird : Birds) { // Loop through each Bird in the list and update it
+           bird->update(); // Update the Bird instance (if needed)
+           bird->UpdateSprite();
+        }
 
-		Bird.update(); // Update the Bird instance (if needed)
-		Bird.UpdateSprite(); // Update the Bird's sprite position based on its physics body
-
+		//bird.update(); // Update the Bird instance (if needed)
+		//bird.UpdateSprite(); // Update the Bird's sprite position based on its physics body
 
         //All of the visuals needs to be synced with the physics.
 
@@ -169,8 +187,10 @@ int main() {
         window.draw(sf_plankVisual);
         window.draw(sf_ballVisual);
 		PigEnemy.render(window); // Render the Pig instance
-		Bird.render(window); // Render the Bird instance
-
+		//bird.render(window); // Render the Bird instance
+		for (auto& bird : Birds) { // Loop through each Bird in the list and render it
+			bird->render(window); // Render the Bird instance
+		}
         window.display();
     }
 

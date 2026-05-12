@@ -5,14 +5,18 @@ DynamicObject::DynamicObject(std::string DynConstructor, sf::IntRect DynIntRect,
 {
 		DynTextureLoc = DynConstructor;
 
-		if (!DynTexture.loadFromFile(DynTextureLoc, DynIntRect)) { // Load the texture from the specified file
+		if (!DynTexture.loadFromFile(DynTextureLoc)) { // Load the texture from the specified file
 			std::cout << "Error loading texture: " << std::endl;// Print an error message if the texture fails to load
 		}
 
 		DynSprite.setTexture(DynTexture);// Set the loaded texture to the sprite
-		DynSprite.setPosition(200.f, 200.f);
-		DynSprite.setOrigin(DynSprite.getGlobalBounds().width / 2, DynSprite.getGlobalBounds().height / 2);// Set the origin of the sprite to its center for proper rotation and positioning.
+		DynSprite.setTextureRect(DynIntRect); // Set the texture rectangle for the sprite, which defines the portion of the texture to be used for rendering
+		//DynSprite.setPosition(200.f, 200.f);
 
+		DynSprite.setOrigin(DynIntRect.width / 2.f, DynIntRect.height / 2.f); // Set the origin of the sprite to its center, which allows for proper rotation around the middle.
+		
+		
+		
 		b2_dynamicCircle.m_radius = 0.5; // Set the radius of the dynamic circle shape for physics simulation
 
 		b2_BodyDef.type = b2_dynamicBody; // Set the body type to dynamic, which means it will be affected by forces and collisions in the physics simulation
