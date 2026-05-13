@@ -1,51 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\test_src\RunTests.cpp">
+    <ClCompile Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\test_src\RunTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\include\Bird.h">
+    <ClInclude Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\include\Bird.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\include\Catapult.h">
+    <ClInclude Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\include\Catapult.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\include\DynamicObject.h">
+    <ClInclude Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\include\DynamicObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\include\Enemy.h">
+    <ClInclude Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\include\Enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\include\GameObject.h">
+    <ClInclude Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\include\GameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\include\NonInteractable.h">
+    <ClInclude Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\include\NonInteractable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\include\Pig.h">
+    <ClInclude Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\include\Pig.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\include\Slingshot.h">
+    <ClInclude Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\include\Slingshot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\include\StaticObject.h">
+    <ClInclude Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\include\StaticObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\include\UI.h">
+    <ClInclude Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\include\UI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{E2588E5E-484A-3C83-8988-B073986B1333}</UniqueIdentifier>
+      <UniqueIdentifier>{00A5F1D8-AE5F-3CE2-AFC3-A76029EAE60E}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{AA94611C-BA13-380D-9C92-0FFFEFEED465}</UniqueIdentifier>
+      <UniqueIdentifier>{9490746B-7B6A-390E-BA72-78DB26341283}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

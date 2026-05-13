@@ -12,7 +12,7 @@ int main() {
 
     std::cout << std::filesystem::current_path() << std::endl;
     // --- 1. WINDOW SETUP ---
-	sf::RenderWindow window(sf::VideoMode(800, 600), "Annoyed_Flocks"); // Create a window with the title "Annoyed_Flocks" and dimensions 800x600 pixels
+	sf::RenderWindow window(sf::VideoMode(1200, 600), "Annoyed_Flocks"); // Create a window with the title "Annoyed_Flocks" and dimensions 800x600 pixels
     window.setFramerateLimit(60);
 
     //Box2D works in meters. SFML works in pixels.
@@ -34,27 +34,45 @@ int main() {
 
     //Define a fixture shape that relates to the collision for the ground.
     b2PolygonShape b2_groundBox;
-    b2_groundBox.SetAsBox(400.0f / SCALE, 10.0f / SCALE);
+    b2_groundBox.SetAsBox(900.0f / SCALE, 10.0f / SCALE);
     b2_groundBody->CreateFixture(&b2_groundBox, 0.0f);
 
+    //Adding a wall that stops birds flying off the screen on the right when they are catapulted.
+	b2BodyDef b2_rightWallDef;
+	b2_rightWallDef.position.Set(1200.0f / SCALE, 300.0f / SCALE);
+	b2Body* b2_rightWallBody = world.CreateBody(&b2_rightWallDef);
+
+	b2PolygonShape b2_rightWallBox;
+	b2_rightWallBox.SetAsBox(10.0f / SCALE, 300.0f / SCALE);
+	b2_rightWallBody->CreateFixture(&b2_rightWallBox, 0.0f);
+
+    //Adding visualisation for the right wall.
+	sf::RectangleShape sf_rightWallVisual(sf::Vector2f(20.0f, 600.0f));
+	sf_rightWallVisual.setOrigin(10.0f, 300.0f);
+	sf_rightWallVisual.setFillColor(sf::Color(34,139,34));
+
+    
+
     //Set up the ground visualisation.
-    sf::RectangleShape sf_groundVisual(sf::Vector2f(800.0f, 20.0f));
+    sf::RectangleShape sf_groundVisual(sf::Vector2f(1200.0f, 20.0f));
     sf_groundVisual.setOrigin(400.0f, 10.0f);
     sf_groundVisual.setFillColor(sf::Color(34, 139, 34)); // Forest Green
 
+
+
     //Setting up a wall for the ball to hit.
-    b2BodyDef b2_wallDef;
-    b2_wallDef.position.Set(750.0f / SCALE, 500.0f / SCALE);
-    b2Body* b2_wallBody = world.CreateBody(&b2_wallDef);
+   // b2BodyDef b2_wallDef;
+   // b2_wallDef.position.Set(750.0f / SCALE, 500.0f / SCALE);
+   // b2Body* b2_wallBody = world.CreateBody(&b2_wallDef);
 
 
-    b2PolygonShape b2_wallBox;
-    b2_wallBox.SetAsBox(10.0f / SCALE, 80.0f / SCALE);
-    b2_wallBody->CreateFixture(&b2_wallBox, 0.0f);
+   // b2PolygonShape b2_wallBox;
+    //b2_wallBox.SetAsBox(10.0f / SCALE, 80.0f / SCALE);
+    //b2_wallBody->CreateFixture(&b2_wallBox, 0.0f);
 
-    sf::RectangleShape sf_wallVisual(sf::Vector2f(20.0f, 160.0f));
-    sf_wallVisual.setOrigin(10.0f, 80.0f);
-    sf_wallVisual.setFillColor(sf::Color::Red);
+    //sf::RectangleShape sf_wallVisual(sf::Vector2f(20.0f, 160.0f));
+    //sf_wallVisual.setOrigin(10.0f, 80.0f);
+    //sf_wallVisual.setFillColor(sf::Color::Red);
 
     //Rather than having an immovable wall, we can use the dynamic body type to create one that can have velocity etc.
     b2BodyDef b2_plankDef;
@@ -75,6 +93,52 @@ int main() {
     sf::RectangleShape sf_plankVisual(sf::Vector2f(20.0f, 120.0f));
     sf_plankVisual.setOrigin(10.0f, 60.0f);
     sf_plankVisual.setFillColor(sf::Color(139, 69, 19)); // Brown
+
+    //Another block. (IDK what to call it yet)
+    b2BodyDef b2_WallDef2;
+	b2_WallDef2.type = b2_dynamicBody;
+    b2_WallDef2.position.Set(800.0f / SCALE, 500.0f / SCALE);
+    b2Body* b2_WallBody2 = world.CreateBody(&b2_WallDef2);
+
+	b2PolygonShape b2_WallBox2;
+	b2_WallBox2.SetAsBox(10.0f / SCALE, 60.0f / SCALE);
+
+	b2FixtureDef b2_WallFixture2;
+	b2_WallFixture2.shape = &b2_WallBox2;
+	b2_WallFixture2.density = 1.0f;   // Light wood
+	b2_WallFixture2.friction = 0.3f;
+	b2_WallBody2->CreateFixture(&b2_WallFixture2);
+
+    //Vizualisation of block 2.
+    sf::RectangleShape sf_WallVisual2(sf::Vector2f(20.0f, 120.0f));
+    sf_WallVisual2.setOrigin(10.0f, 60.0f);
+    sf_WallVisual2.setFillColor(sf::Color(139, 69, 19)); // Brown
+
+
+
+    //Another block. (IDK what to call it yet)
+    b2BodyDef b2_WallDef3;
+    b2_WallDef3.type = b2_dynamicBody;
+    b2_WallDef3.position.Set(10.0f / SCALE, 475.0f / SCALE);
+    b2Body* b2_WallBody3 = world.CreateBody(&b2_WallDef2);
+
+    b2PolygonShape b2_WallBox3;
+    b2_WallBox3.SetAsBox(60.0f / SCALE, 10.0f / SCALE);
+
+    b2FixtureDef b2_WallFixture3;
+    b2_WallFixture3.shape = &b2_WallBox3;
+    b2_WallFixture3.density = 1.0f;   // Light wood
+    b2_WallFixture3.friction = 0.3f;
+    b2_WallBody3->CreateFixture(&b2_WallFixture3);
+
+    //Vizualisation of block 3
+    sf::RectangleShape sf_WallVisual3(sf::Vector2f(120.0f, 20.0f));
+    sf_WallVisual3.setOrigin(60.0f, 10.0f);
+    sf_WallVisual3.setFillColor(sf::Color(139, 69, 19)); // Brown
+
+
+
+
 
     //Create a ball that is fired when space is pressed. We need to first have a dynamic ball to do it.
     b2BodyDef b2_ballDef;
@@ -107,6 +171,7 @@ int main() {
 	b2FixtureDef b2_fixtureDef;
 	b2Body* b2_body;
 
+
 	//b2CircleShape b2_dynamicCircle;
     
 	//Creates a bird
@@ -117,9 +182,9 @@ int main() {
 	std::vector<sf::IntRect>birdsprites = { sf::IntRect(903, 798, 47, 47),sf::IntRect(300, 752, 100, 95),sf::IntRect(0, 378, 40, 32) 
 	}; //These are the position and size of the different birds in the sprite sheet. We can use these to create multiple birds with different appearances. The sf::IntRect constructor takes four parameters: the x and y coordinates of the top-left corner of the rectangle, and the width and height of the rectangle. These rectangles define the portion of the sprite sheet that will be used for each bird's texture.
 
-	int xOffset = 100; // This variable is used to increment the x position of each bird when creating multiple birds. It starts at 100 and is increased by 100 for each subsequent bird, ensuring that the birds are spaced apart horizontally when they are created.
+	int xOffset = -100; // This variable is used to increment the x position of each bird when creating multiple birds. It starts at 100 and is increased by 100 for each subsequent bird, ensuring that the birds are spaced apart horizontally when they are created.
 
-	for (const auto& spriteRect : birdsprites) {
+	for (const auto& spriteRect : birdsprites) { // Loop through each sf::IntRect in the birdsprites vector and create a Bird instance for each one, using the corresponding sprite rectangle and position. The position of each bird is determined by the xOffset variable, which is incremented for each bird to ensure they are spaced apart horizontally.
 		Birds.push_back(std::make_unique<Bird>("../assets/Ang_Birds/Angry_Birds.png", spriteRect, b2Vec2((100.0f - xOffset) / SCALE, 500.0f / SCALE), world, 1.0f, 3.0f, 0.5f)); // Create a Bird instance with texture, sprite rectangle, and position
             xOffset += 60; // Increment the xOffset for the next bird's position
 	}
@@ -185,19 +250,34 @@ int main() {
 
         //Static objects usually don't move, but we set the position once.
         sf_groundVisual.setPosition(b2_groundBody->GetPosition().x * SCALE, b2_groundBody->GetPosition().y * SCALE);
-        sf_wallVisual.setPosition(b2_wallBody->GetPosition().x * SCALE, b2_wallBody->GetPosition().y * SCALE);
+       // sf_wallVisual.setPosition(b2_wallBody->GetPosition().x * SCALE, b2_wallBody->GetPosition().y * SCALE);
 
         // Dynamic wall.
         sf_plankVisual.setPosition(b2_plankBody->GetPosition().x * SCALE, b2_plankBody->GetPosition().y * SCALE);
         sf_plankVisual.setRotation(b2_plankBody->GetAngle() * (180.0f / PI));
 
+		// Right wall
+		sf_rightWallVisual.setPosition(b2_rightWallBody->GetPosition().x * SCALE, b2_rightWallBody->GetPosition().y * SCALE);
+        
+        
+		// Block 2
+		sf_WallVisual2.setPosition(b2_WallBody2->GetPosition().x * SCALE, b2_WallBody2->GetPosition().y * SCALE);
+		sf_WallVisual2.setRotation(b2_WallBody2->GetAngle() * (180.0f / PI));
+
+		// Block 3
+		sf_WallVisual3.setPosition(b2_WallBody3->GetPosition().x * SCALE, b2_WallBody3->GetPosition().y * SCALE);
+		sf_WallVisual3.setRotation(b2_WallBody3->GetAngle() * (180.0f / PI));
+
         //Render all of the content at each frame. Remember you need to clear the screen each iteration or artefacts remain.
         window.clear(sf::Color(135, 206, 235)); // Sky Blue
 
         window.draw(sf_groundVisual);
-        window.draw(sf_wallVisual);
+       // window.draw(sf_wallVisual);
         window.draw(sf_plankVisual);
         window.draw(sf_ballVisual);
+		window.draw(sf_rightWallVisual);
+		window.draw(sf_WallVisual2);
+		window.draw(sf_WallVisual3);
 		
 		for (auto& pig : Pigs) { // Loop through each Pig in the list and render it
 			pig->render(window); // Render the Pig instance
