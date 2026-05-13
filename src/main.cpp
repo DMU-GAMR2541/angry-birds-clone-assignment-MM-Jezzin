@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Bird.h"
 #include "Pig.h"
+#include "Structure.h" 
 
 #include <filesystem>
 #include <list> // Include the list header for using std::list - the lists for the different birds and pigs :)
@@ -28,7 +29,6 @@ int main() {
     sf::Vector2f slingpos(150.0f, 500.0f); // Position of the sling, where the birs is going to sit before it gets catapulted.
     float slingRadiusY = 50.0f; // Radius of the sling, which determines how far the bird can be pulled back before being launched. This is used to limit the distance the bird can be dragged from the sling position, ensuring that the launch force is proportional to how far the bird is pulled back.
     float slingRadiusX = 50.0f; // Radius of the sling in the X direction, which determines how far the bird can be pulled back horizontally before being launched. This is used to limit the distance the bird can be dragged from the sling position in the horizontal direction, ensuring that the launch force is proportional to how far the bird is pulled back horizontally.
-    float launchForceMultiplier = 15.0f; // Multiplier for the launch force, which determines how much force is applied to the bird when it is launched. This is used to adjust the strength of the launch, allowing for fine-tuning of the gameplay experience. A higher multiplier will result in a stronger launch, while a lower multiplier will result in a weaker launch.
 	int currentBird = 0; // Index of the current bird being launched, which is used to keep track of which bird is currently active and being controlled by the player. This allows for managing multiple birds in the game and ensuring that the correct bird is launched when the player interacts with the sling.
 	bool Dragging = false; // Flag to indicate whether the player is currently dragging the bird, which is used to manage the state of the sling and the bird's position. When this flag is true, it indicates that the player is actively dragging the bird, allowing for real-time updates to the bird's position and launch force based on the player's input.
 	bool launched = false; // Flag to indicate whether the bird has been launched, which is used to manage the state of the game and ensure that the bird is only launched once per interaction with the sling. When this flag is true, it indicates that the bird has been launched, preventing further dragging or launching until the next bird is selected.
@@ -174,16 +174,22 @@ int main() {
 	b2FixtureDef b2_fixtureDef;
 	b2Body* b2_body;
 
-
-	//b2CircleShape b2_dynamicCircle;
-    
-	//Creates a bird
-	//Bird bird("../assets/Ang_Birds/Adapted_Birds.png", sf::IntRect(940, 196,80, 80), b2Vec2(250.0f / SCALE, 200.0f / SCALE), world, 1.0f, 3.0f, 0.5f); // Create a Bird instance with texture, sprite rectangle, and position
 	//list of birds and pigs
 	std::vector<std::unique_ptr<Bird>> Birds;
     
 	std::vector<sf::IntRect>birdsprites = { sf::IntRect(903, 798, 47, 47),sf::IntRect(300, 752, 100, 95),sf::IntRect(0, 378, 40, 32) 
 	}; //These are the position and size of the different birds in the sprite sheet. We can use these to create multiple birds with different appearances. The sf::IntRect constructor takes four parameters: the x and y coordinates of the top-left corner of the rectangle, and the width and height of the rectangle. These rectangles define the portion of the sprite sheet that will be used for each bird's texture.
+
+    //Giving different birds launch strengths as one doesnt go far enough.
+	std::vector<float> launchForceMultipliers = { 
+         15.0f, //red
+         60.0f,//big red
+         10.0f }; //blue
+    // This vector holds different launch force multipliers for each bird, allowing for varying launch strengths based on the type of bird being launched. Each multiplier corresponds to a specific bird in the birdsprites vector, providing a way to customize the launch behavior for different bird types in the game.
+
+
+
+
 
 	int xOffset = -100; // This variable is used to increment the x position of each bird when creating multiple birds. It starts at 100 and is increased by 100 for each subsequent bird, ensuring that the birds are spaced apart horizontally when they are created.
 
@@ -212,6 +218,23 @@ int main() {
 		xOffset += 100; // Increment the xOffset for the next pig's position
 
 	}
+
+
+    //Now need to do the same for structures.
+
+   
+    // List to hold dynamic objects that make up the structures in the game
+	std::vector<std::unique_ptr<DynamicObject>> Structures; 
+
+    //For the Wood Blocks
+    std::vector<sf::IntRect> woodSprites = { sf::IntRect(0, 0, 64, 64), sf::IntRect(, 64, 64, 64), };
+
+    // For the Ice Blocks
+	std::vector<sf::IntRect> iceSprites = { sf::IntRect(0, 64, 64, 64), sf::IntRect(64, 64, 64, 64), };
+
+    //For the Stone Blocks
+	std::vector<sf::IntRect> stoneSprites = { sf::IntRect(0, 128, 64, 64), sf::IntRect(64, 128, 64, 64), };
+
 
   
     int activeBird = 0; //Index of the current active bird in sling
@@ -252,9 +275,13 @@ int main() {
                         // Set the bird's body type to dynamic, when it is launched.
 
 
-                        body->ApplyLinearImpulseToCenter(b2Vec2(slingVec.x * launchForceMultiplier / SCALE, slingVec.y * launchForceMultiplier / SCALE), true);
-                        // Apply a linear impulse to the center of the bird's body, using the slingVec multiplied by the launchForceMultiplier and divided by SCALE to convert it to Box2D units. This impulse will launch the bird in the direction opposite to where it was dragged from the sling, with a strength proportional to how far it was dragged.
+                        //applying launch force for each bird
+						float currentLaunchForceMultiplier = launchForceMultipliers[currentBird]; 
+                        // Get the launch force multiplier
 
+						// Applying a linear impulse to the bird's center based on the sling vector and the current launch force multiplier, which determines the strength and direction of the launch.
+                        body->ApplyLinearImpulseToCenter(b2Vec2(slingVec.x * currentLaunchForceMultiplier / SCALE, slingVec.y * currentLaunchForceMultiplier / SCALE), true);
+                        
 
                         Dragging = false; // Set dragging flag to false when the left mouse button is released, regardless of whether the bird was launched or not
                         launched = true; // Set launched flag to true when the bird is launched, preventing further dragging or launching until the next bird is selected

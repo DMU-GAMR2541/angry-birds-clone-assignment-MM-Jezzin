@@ -27,9 +27,13 @@ protected:
 public:
 	DynamicObject() = default; // Default constructor
 
+
+	enum ShapeType { Circle, Box };
+
+
 	virtual ~DynamicObject() = default; // Virtual destructor to ensure proper cleanup of derived classes
 	//Initializes a DynamicObject with the specified parameters.
-	DynamicObject(std::string DynConstructor, sf::IntRect DynIntRect, b2Vec2 DynStartPos, b2World& world, float Density, float Friction, float Restitution);
+	DynamicObject(std::string texturePath, sf::IntRect spriteRect, b2Vec2 startPos, b2World& world, float Density, float Friction, float Restitution);
 
 
 	void render(sf::RenderWindow& GObjRenderWindow) override;

@@ -1,27 +1,27 @@
 #include "DynamicObject.h"
 
 const float SCALE = 30.f;
-DynamicObject::DynamicObject(std::string DynConstructor, sf::IntRect DynIntRect, b2Vec2 DynStartPos, b2World& world, float Density, float Friction, float Restitution) 
+DynamicObject::DynamicObject(std::string texturePath, sf::IntRect spriteRect, b2Vec2 startPos, b2World& world, float Density, float Friction, float Restitution) 
 {
-		DynTextureLoc = DynConstructor;
+		DynTextureLoc = texturePath;
 
 		if (!DynTexture.loadFromFile(DynTextureLoc)) { // Load the texture from the specified file
 			std::cout << "Error loading texture: " << std::endl;// Print an error message if the texture fails to load
 		}
 
 		DynSprite.setTexture(DynTexture);// Set the loaded texture to the sprite
-		DynSprite.setTextureRect(DynIntRect); // Set the texture rectangle for the sprite, which defines the portion of the texture to be used for rendering
+		DynSprite.setTextureRect(spriteRect); // Set the texture rectangle for the sprite, which defines the portion of the texture to be used for rendering
 		//DynSprite.setPosition(200.f, 200.f);
 
-		DynSprite.setOrigin(DynIntRect.width / 2.f, DynIntRect.height / 2.f); // Set the origin of the sprite to its center, which allows for proper rotation around the middle.
+		DynSprite.setOrigin(spriteRect.width / 2.f, spriteRect.height / 2.f); // Set the origin of the sprite to its center, which allows for proper rotation around the middle.
 		
 		
 		//finding the average of the width and height of the texture rectangle to determine the size of the circle shape for physics simulation.
-		float Size = (DynIntRect.width + DynIntRect.height) / 4.0f;
+		float Size = (spriteRect.width + spriteRect.height) / 4.0f;
 		b2_dynamicCircle.m_radius = Size / SCALE;
 
 		b2_BodyDef.type = b2_dynamicBody; // Set the body type to dynamic, which means it will be affected by forces and collisions in the physics simulation
-		b2_BodyDef.position = DynStartPos; // Set the initial position of the body in the physics world using the provided starting position
+		b2_BodyDef.position = startPos; // Set the initial position of the body in the physics world using the provided starting position
 		b2_body = world.CreateBody(&b2_BodyDef); // Create the body in the Box2D world using the defined body definition
 
 
