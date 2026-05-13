@@ -15,14 +15,20 @@ DynamicObject::DynamicObject(std::string DynConstructor, sf::IntRect DynIntRect,
 
 		DynSprite.setOrigin(DynIntRect.width / 2.f, DynIntRect.height / 2.f); // Set the origin of the sprite to its center, which allows for proper rotation around the middle.
 		
-		//This calculates the size of the circle shape based on the average of the width and height of the texture rectangle, which is used to define the radius of the dynamic circle shape for physics simulation. The division by 4.0f is likely to convert the average size to a suitable radius for the physics simulation, as Box2D typically uses smaller units for its shapes.
-		float Size = (DynIntRect.width + DynIntRect.height) / 4.0f;
 		
-		b2_dynamicCircle.m_radius = Size / SCALE; // Set the radius of the dynamic circle shape for physics simulation
+		//finding the average of the width and height of the texture rectangle to determine the size of the circle shape for physics simulation.
+		float Size = (DynIntRect.width + DynIntRect.height) / 4.0f;
+		b2_dynamicCircle.m_radius = Size / SCALE;
 
 		b2_BodyDef.type = b2_dynamicBody; // Set the body type to dynamic, which means it will be affected by forces and collisions in the physics simulation
-		b2_BodyDef.position = DynStartPos;
+		b2_BodyDef.position = DynStartPos; // Set the initial position of the body in the physics world using the provided starting position
 		b2_body = world.CreateBody(&b2_BodyDef); // Create the body in the Box2D world using the defined body definition
+
+		//Freezing bird so it doesnt move before being launched
+		b2_body->SetGravityScale(0.0f); // Set the gravity scale to 0, which means the body will not be affected by gravity in the physics simulation, allowing it to remain stationary until it is launched or interacted with.
+		b2_body->SetLinearVelocity(b2Vec2(0.0f, 0.0f)); // Set the initial linear velocity of the body to zero, ensuring that it starts without any movement in the physics simulation
+		b2_body->SetAngularVelocity(0.0f); // Set the initial angular velocity of the body to zero, ensuring that it starts without any rotation in the physics simulation
+		b2_body->SetAwake(false); // Set the body to be initially asleep, which means it will not be active in the physics simulation until it is awakened by an impulse or collision
 
 		b2_fixtureDef.shape = &b2_dynamicCircle; // Set the shape of the fixture to the defined dynamic circle, which will be used for collision detection and response in the physics simulation
 		b2_fixtureDef.density = 1.0f;
@@ -31,12 +37,9 @@ DynamicObject::DynamicObject(std::string DynConstructor, sf::IntRect DynIntRect,
 
 		b2_body->CreateFixture(&b2_fixtureDef); // Create a fixture for the body using the defined fixture definition, which includes the shape, density, friction, and restitution properties
 
-		//void impulse(b2Vec2 b2_impulse, bool awake)
 		
-		//{
-		//	b2_body->ApplyLinearImpulseToCenter(b2_impulse, awake); //Adds impulse to an object
-		//};
 }
+
 
 void DynamicObject::render(sf::RenderWindow & GObjRenderWindow) {
 	GObjRenderWindow.draw(DynSprite); // Draw the sprite on the provided render window
@@ -47,4 +50,15 @@ void DynamicObject::update() {
 
 void DynamicObject::UpdateSprite() {
 	DynSprite.setPosition(sf::Vector2f(b2_body->GetPosition().x * SCALE, b2_body->GetPosition().y * SCALE)); // Update the sprite's position based on the physics body's position, scaling it to match the visual representation
+}
+
+
+//Applies a linear impulse to the center of the physics body, allowing for movement and interaction with other objects in the physics simulation. The 'awake' parameter determines whether the body should be awakened if it is currently sleeping, which can affect how the physics engine processes the impulse and updates the body's state accordingly.
+void DynamicObject::impulse(b2Vec2 b2_impulse, bool awake) //
+{
+	b2_body->ApplyLinearImpulseToCenter(b2_impulse, awake); //Adds impulse to an object
+};
+
+void DynamicObject::setGravityScale(float scale) {
+	b2_body->SetGravityScale(scale); //Sets the gravity scale for the physics body, allowing for adjustments to how gravity affects the object in the physics simulation. A higher scale will make the object more affected by gravity, while a lower scale will reduce its influence.
 }

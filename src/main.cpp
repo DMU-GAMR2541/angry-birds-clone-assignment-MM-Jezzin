@@ -120,8 +120,8 @@ int main() {
 	int xOffset = 100; // This variable is used to increment the x position of each bird when creating multiple birds. It starts at 100 and is increased by 100 for each subsequent bird, ensuring that the birds are spaced apart horizontally when they are created.
 
 	for (const auto& spriteRect : birdsprites) {
-		Birds.push_back(std::make_unique<Bird>("../assets/Ang_Birds/Angry_Birds.png", spriteRect, b2Vec2((250.0f + xOffset) / SCALE, 200.0f / SCALE), world, 1.0f, 3.0f, 0.5f)); // Create a Bird instance with texture, sprite rectangle, and position
-            xOffset += 100; // Increment the xOffset for the next bird's position
+		Birds.push_back(std::make_unique<Bird>("../assets/Ang_Birds/Angry_Birds.png", spriteRect, b2Vec2((100.0f - xOffset) / SCALE, 500.0f / SCALE), world, 1.0f, 3.0f, 0.5f)); // Create a Bird instance with texture, sprite rectangle, and position
+            xOffset += 60; // Increment the xOffset for the next bird's position
 	}
 
 
@@ -130,7 +130,7 @@ int main() {
 	//list of pigs
 	std::vector<std::unique_ptr<Pig>> Pigs;
 
-    
+	//These are the position and size of the different pigs in the sprite sheet. We can use these to create multiple pigs with different appearances. The sf::IntRect constructor takes four parameters: the x and y coordinates of the top-left corner of the rectangle, and the width and height of the rectangle. These rectangles define the portion of the sprite sheet that will be used for each pig's texture.
 	std::vector<sf::IntRect>pigsprites = { sf::IntRect(928, 447, 80, 80),sf::IntRect(733, 155, 110, 100),sf::IntRect(732, 856, 60, 45) };
 
 	xOffset = 0; // Reset xOffset for pigs
@@ -156,9 +156,19 @@ int main() {
                     b2_ballBody->SetAngularVelocity(0);
 
                     // Apply impulse (X-axis, Y-axis) Negative Y is UP in Box2D because gravity is positive.
-                    b2_ballBody->ApplyLinearImpulse(b2Vec2(5.0f, -5.0f), b2_ballBody->GetWorldCenter(), true);
+                    //b2_ballBody->ApplyLinearImpulse(b2Vec2(5.0f, -5.0f), b2_ballBody->GetWorldCenter(), true);
+                    if (!Birds.empty()) { // Check if there are any birds in the list before trying to access the first one
+						Birds[0]->setGravityScale(1.0f); // Set gravity scale to 1 to make the bird affected by gravity (optional, depending on desired behavior)
+                        Birds[0]->impulse(b2Vec2(8.0f, -10.0f), true); // Apply impulse to the first bird in the list
+						Birds[0]->fired = true; // Set the fired flag to true for the first bird (for gravity purposes)
 
-                    std::cout << "Firing!!!!" << std::endl;
+
+
+                        std::cout << "Firing!!!!" << std::endl;
+
+
+                        //then remove bird and add bird deleted std::cout
+                    }
                 }
             }
         }
@@ -205,7 +215,13 @@ int main() {
 
 		//bird.render(window); // Render the Bird instance
 		for (auto& bird : Birds) { // Loop through each Bird in the list and render it
-			bird->render(window); // Render the Bird instance
+			if (!bird->fired) { // Check if the bird has been fired before setting gravity scale
+				bird->setGravityScale(0.0f); // Set gravity scale to 0 to make the bird unaffected by gravity until it is fired (optional, depending on desired behavior)
+			}
+            else {
+				bird->setGravityScale(1.0f); // Set gravity scale to 1 to make the bird affected by gravity after it has been fired (optional, depending on desired behavior)
+            }
+            bird->render(window); // Render the Bird instance
 		}
         window.display();
     }

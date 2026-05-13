@@ -36,7 +36,9 @@ public:
 	void UpdateSprite();
 
 
+	void impulse(b2Vec2 b2_impulse, bool awake); //Applies a linear impulse to the center of the physics body, allowing for movement and interaction with other objects in the physics simulation. The 'awake' parameter determines whether the body should be awakened if it is currently sleeping, which can affect how the physics engine processes the impulse and updates the body's state accordingly.
+	void setGravityScale(float scale); //Sets the gravity scale for the physics body, allowing for adjustments to how gravity affects the object in the physics simulation. A higher scale will make the object more affected by gravity, while a lower scale will reduce its influence.
 
 
-
+	bool fired = false; //A boolean variable that indicates whether the bird has been fired or launched in the game. This variable can be used to track the state of the object and determine if it has been activated or is still in its initial state, which can affect how it interacts with other objects and the physics simulation in the game.
 };
