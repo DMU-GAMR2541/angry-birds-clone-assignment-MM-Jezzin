@@ -1,7 +1,9 @@
 #pragma once
 #include "DynamicObject.h"
+#include <SFML/Graphics.hpp>
+#include <string>
 
-class Structure : public virtual DynamicObject { // Structure inherits from DynamicObject
+class Structure : public DynamicObject { // Structure inherits from DynamicObject
 
 public:
 	Structure() = default; // Default constructor

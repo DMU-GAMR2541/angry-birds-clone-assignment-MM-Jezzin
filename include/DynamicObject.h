@@ -33,8 +33,8 @@ public:
 
 	virtual ~DynamicObject() = default; // Virtual destructor to ensure proper cleanup of derived classes
 	//Initializes a DynamicObject with the specified parameters.
-	DynamicObject(std::string texturePath, sf::IntRect spriteRect, b2Vec2 startPos, b2World& world, float Density, float Friction, float Restitution);
-
+	DynamicObject(std::string texturePath, sf::IntRect spriteRect, b2Vec2 startPos, b2World& world, float Density, float Friction, float Restitution, ShapeType shapeType);
+	//added shape type to differ between circle and box shapes for physics body :)
 
 	void render(sf::RenderWindow& GObjRenderWindow) override;
 	void update() override;

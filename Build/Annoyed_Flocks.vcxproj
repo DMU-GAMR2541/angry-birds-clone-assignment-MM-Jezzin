@@ -414,8 +414,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="..\src\Bird.cpp" />
     <ClCompile Include="..\src\DynamicObject.cpp" />
+    <ClCompile Include="..\src\Structure.cpp" />
     <ClCompile Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\src\main.cpp" />
-    <ClCompile Include="Structure.cpp" />
     <ClInclude Include="..\include\Structure.h" />
     <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\include\Bird.h" />
     <ClInclude Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\include\Catapult.h" />

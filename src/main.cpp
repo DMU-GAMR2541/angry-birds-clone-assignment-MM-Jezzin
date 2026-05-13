@@ -10,7 +10,7 @@
 #include <vector>
 #include <algorithm> // Include the algorithm header for using std::clamp in the catapult dragging system   
 #include <cmath> // Include the cmath header for using mathematical functions like std::sqrt in the catapult dragging system
-
+#include <memory> // Include the memory header for using smart pointers like std::unique_ptr to manage dynamic memory for birds, pigs, and structures in the game
 
 int main() {
 
@@ -35,6 +35,11 @@ int main() {
 	float waitingTimer = 0.0f; // Timer to track the waiting time after a bird is launched, which can be used to implement a delay before allowing the next bird to be launched.
 	float waitingTimeThreshold = 5.0f; // Threshold for the waiting time, which determines how long the player must wait after launching a bird before being able to launch the next one.
 	sf::Clock birdTimer; // Clock to track the time since the last bird was launched.
+
+
+    //For the structures
+    float startX = 700.0f;
+    float startY = 500.0f;
 
 
     //setup world.
@@ -223,19 +228,29 @@ int main() {
     //Now need to do the same for structures.
 
    
-    // List to hold dynamic objects that make up the structures in the game
-	std::vector<std::unique_ptr<DynamicObject>> Structures; 
+
 
     //For the Wood Blocks
-    std::vector<sf::IntRect> woodSprites = { sf::IntRect(0, 0, 64, 64), sf::IntRect(, 64, 64, 64), };
+    std::vector<sf::IntRect> woodSprites = { sf::IntRect(884, 394, 166, 19), sf::IntRect(884, 394, 166, 19), };
 
     // For the Ice Blocks
-	std::vector<sf::IntRect> iceSprites = { sf::IntRect(0, 64, 64, 64), sf::IntRect(64, 64, 64, 64), };
+	std::vector<sf::IntRect> iceSprites = { sf::IntRect(304, 396, 166, 19), sf::IntRect(304, 396, 166, 19), };
 
     //For the Stone Blocks
-	std::vector<sf::IntRect> stoneSprites = { sf::IntRect(0, 128, 64, 64), sf::IntRect(64, 128, 64, 64), };
+	std::vector<sf::IntRect> stoneSprites = { sf::IntRect(1417, 403, 166, 19), sf::IntRect(1417, 403, 166, 19), };
 
+    // List to hold dynamic objects that make up the structures in the game
+    std::vector<std::unique_ptr<Structure>> Structures;
 
+    for (int i = 0; i < 4; i++) { //simple loop for now.
+        Structures.push_back(std::make_unique<Structure>( // adds new block to structure vector 
+            "../assets/Ang_Birds/Angry_Birds_Spritesheet_Blocks.png",stoneSprites[i % stoneSprites.size()], 
+			//using % to prevent crash if we have more blocks than sprites, it will loop back through the sprites.
+			b2Vec2((startX + i * 65) / SCALE, startY / SCALE), world, 2.0f, 0.6f, 0.1f //density, friction, restitution.
+
+           
+        ));
+    }
   
     int activeBird = 0; //Index of the current active bird in sling
     
@@ -370,6 +385,12 @@ int main() {
            bird->UpdateSprite();
         }
 
+		//Update the structure blocks
+		for (auto& structure : Structures) { // Loop through each Structure in the list and update it
+			structure->update(); // Update the Structure instance (if needed)
+			structure->UpdateSprite();
+		}
+
 		//bird.update(); // Update the Bird instance (if needed)
 		//bird.UpdateSprite(); // Update the Bird's sprite position based on its physics body
 
@@ -419,6 +440,10 @@ int main() {
 			bird->UpdateSprite(); // Update the Bird's sprite position based on its physics body
             bird->render(window); // Render the Bird instance
 		}
+
+        for (auto& structure : Structures) { // Loop through each Structure in the list and render it
+            structure->render(window); // Render the Structure instance
+        }
         window.display();
     }
 
