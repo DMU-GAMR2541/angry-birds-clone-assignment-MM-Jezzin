@@ -150,22 +150,12 @@ int main() {
 			// INPUT HANDLING: Press SPACE to launchok the ball. We can apply an impulse to the ball to make it move. The impulse is a sudden force applied to an object, which changes its velocity. In Box2D, we can use the ApplyLinearImpulse function to apply an impulse to a body. The impulse is defined as a vector that specifies the direction and magnitude of the force. In this case, we want to apply an impulse in the positive X direction (to the right) and negative Y direction (upwards) to launch the ball towards the targets.
             if (event.type == sf::Event::KeyPressed) {
                 if (event.key.code == sf::Keyboard::Space) {
-                    // Reset position of the ball so that it can be fired again from its original poisition.
-                    b2_ballBody->SetTransform(b2Vec2(100.0f / SCALE, 500.0f / SCALE), 0);
-                    b2_ballBody->SetLinearVelocity(b2Vec2(0, 0));
-                    b2_ballBody->SetAngularVelocity(0);
-
                     // Apply impulse (X-axis, Y-axis) Negative Y is UP in Box2D because gravity is positive.
                     //b2_ballBody->ApplyLinearImpulse(b2Vec2(5.0f, -5.0f), b2_ballBody->GetWorldCenter(), true);
                     if (!Birds.empty()) { // Check if there are any birds in the list before trying to access the first one
-						Birds[0]->setGravityScale(1.0f); // Set gravity scale to 1 to make the bird affected by gravity (optional, depending on desired behavior)
-                        Birds[0]->impulse(b2Vec2(8.0f, -10.0f), true); // Apply impulse to the first bird in the list
-						Birds[0]->fired = true; // Set the fired flag to true for the first bird (for gravity purposes)
-
-
+                        Birds[0]->fire(b2Vec2(8.0f, -10.0f)); // Apply impulse to the first bird in the list
 
                         std::cout << "Firing!!!!" << std::endl;
-
 
                         //then remove bird and add bird deleted std::cout
                     }
@@ -215,12 +205,8 @@ int main() {
 
 		//bird.render(window); // Render the Bird instance
 		for (auto& bird : Birds) { // Loop through each Bird in the list and render it
-			if (!bird->fired) { // Check if the bird has been fired before setting gravity scale
-				bird->setGravityScale(0.0f); // Set gravity scale to 0 to make the bird unaffected by gravity until it is fired (optional, depending on desired behavior)
-			}
-            else {
-				bird->setGravityScale(1.0f); // Set gravity scale to 1 to make the bird affected by gravity after it has been fired (optional, depending on desired behavior)
-            }
+			bird->update(); // Update the Bird instance (if needed)
+			bird->UpdateSprite(); // Update the Bird's sprite position based on its physics body
             bird->render(window); // Render the Bird instance
 		}
         window.display();

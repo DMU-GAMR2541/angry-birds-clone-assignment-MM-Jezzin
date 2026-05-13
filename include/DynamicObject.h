@@ -20,8 +20,9 @@ private:
 	b2BodyDef b2_BodyDef;
 	b2FixtureDef b2_fixtureDef;
 	b2CircleShape b2_dynamicCircle;
+	
+protected:
 	b2Body* b2_body;
-
 
 public:
 	DynamicObject() = default; // Default constructor
@@ -40,5 +41,4 @@ public:
 	void setGravityScale(float scale); //Sets the gravity scale for the physics body, allowing for adjustments to how gravity affects the object in the physics simulation. A higher scale will make the object more affected by gravity, while a lower scale will reduce its influence.
 
 
-	bool fired = false; //A boolean variable that indicates whether the bird has been fired or launched in the game. This variable can be used to track the state of the object and determine if it has been activated or is still in its initial state, which can affect how it interacts with other objects and the physics simulation in the game.
 };

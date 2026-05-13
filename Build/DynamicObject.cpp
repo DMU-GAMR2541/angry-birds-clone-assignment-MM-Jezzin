@@ -24,11 +24,6 @@ DynamicObject::DynamicObject(std::string DynConstructor, sf::IntRect DynIntRect,
 		b2_BodyDef.position = DynStartPos; // Set the initial position of the body in the physics world using the provided starting position
 		b2_body = world.CreateBody(&b2_BodyDef); // Create the body in the Box2D world using the defined body definition
 
-		//Freezing bird so it doesnt move before being launched
-		b2_body->SetGravityScale(0.0f); // Set the gravity scale to 0, which means the body will not be affected by gravity in the physics simulation, allowing it to remain stationary until it is launched or interacted with.
-		b2_body->SetLinearVelocity(b2Vec2(0.0f, 0.0f)); // Set the initial linear velocity of the body to zero, ensuring that it starts without any movement in the physics simulation
-		b2_body->SetAngularVelocity(0.0f); // Set the initial angular velocity of the body to zero, ensuring that it starts without any rotation in the physics simulation
-		b2_body->SetAwake(false); // Set the body to be initially asleep, which means it will not be active in the physics simulation until it is awakened by an impulse or collision
 
 		b2_fixtureDef.shape = &b2_dynamicCircle; // Set the shape of the fixture to the defined dynamic circle, which will be used for collision detection and response in the physics simulation
 		b2_fixtureDef.density = 1.0f;

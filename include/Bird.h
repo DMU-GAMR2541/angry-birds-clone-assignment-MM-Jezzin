@@ -7,9 +7,17 @@
 class Bird : public DynamicObject { // Bird inherits from DynamicObject
 	
 public:
-	Bird() = default; // Default constructor
+    Bird(std::string BirdLoc,
+        sf::IntRect BirdIntRect,
+        b2Vec2 BirdStartPos,
+        b2World& World,
+        float BirdDensity,
+        float BirdFriction,
+        float BirdRestitution);
 
-	
-	//Initializes a Bird object with the specified parameters.
-	Bird(std::string BirdLoc, sf::IntRect BirdIntRect, b2Vec2 BirdStartPos, b2World& World, float BirdDensity, float BirdFriction, float BirdRestitution) : DynamicObject(BirdLoc, BirdIntRect, BirdStartPos, World, BirdDensity, BirdFriction, BirdRestitution) {};
+    void load();
+    void fire(b2Vec2 impulse);
+
+    bool loaded = true;
+    bool fired = false;
 };
