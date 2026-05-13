@@ -2,7 +2,7 @@
 #include "DynamicObject.h" 
 #include <iostream> 
 #include <SFML/Graphics.hpp>
-
+#include <box2d/box2d.h>
 
 class Bird : public DynamicObject { // Bird inherits from DynamicObject
 	
@@ -12,10 +12,9 @@ public:
 
     void load();
     void fire(b2Vec2 impulse);
-
+    b2Body* getBody();
     bool loaded = true;
     bool fired = false;
-    bool isMoving();
-
+   
 
 };

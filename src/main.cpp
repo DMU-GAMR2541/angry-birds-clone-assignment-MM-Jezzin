@@ -8,6 +8,7 @@
 #include <list> // Include the list header for using std::list - the lists for the different birds and pigs :)
 #include <vector>
 
+
 int main() {
 
     std::cout << std::filesystem::current_path() << std::endl;
@@ -20,6 +21,16 @@ int main() {
 
     //Can set a definition for PI.
     const float PI = 3.1415927;
+
+    //Trying to make catapult work :)
+    sf::Vector2f slingpos(150.0f, 500.0f); // Position of the sling, where the birs is going to sit before it gets catapulted.
+    float slingRadiusY = 50.0f; // Radius of the sling, which determines how far the bird can be pulled back before being launched. This is used to limit the distance the bird can be dragged from the sling position, ensuring that the launch force is proportional to how far the bird is pulled back.
+    float slingRadiusX = 50.0f; // Radius of the sling in the X direction, which determines how far the bird can be pulled back horizontally before being launched. This is used to limit the distance the bird can be dragged from the sling position in the horizontal direction, ensuring that the launch force is proportional to how far the bird is pulled back horizontally.
+    float launchForceMultiplier = 0.5f; // Multiplier for the launch force, which determines how much force is applied to the bird when it is launched. This is used to adjust the strength of the launch, allowing for fine-tuning of the gameplay experience. A higher multiplier will result in a stronger launch, while a lower multiplier will result in a weaker launch.
+	int currentBird = 0; // Index of the current bird being launched, which is used to keep track of which bird is currently active and being controlled by the player. This allows for managing multiple birds in the game and ensuring that the correct bird is launched when the player interacts with the sling.
+	bool Dragging = false; // Flag to indicate whether the player is currently dragging the bird, which is used to manage the state of the sling and the bird's position. When this flag is true, it indicates that the player is actively dragging the bird, allowing for real-time updates to the bird's position and launch force based on the player's input.
+	bool launched = false; // Flag to indicate whether the bird has been launched, which is used to manage the state of the game and ensure that the bird is only launched once per interaction with the sling. When this flag is true, it indicates that the bird has been launched, preventing further dragging or launching until the next bird is selected.
+
 
     //setup world.
     b2Vec2 b2_gravity(0.0f, 9.8f); // Earth-like gravity
@@ -188,11 +199,15 @@ int main() {
 		Birds.push_back(std::make_unique<Bird>("../assets/Ang_Birds/Angry_Birds.png", spriteRect, b2Vec2((100.0f - xOffset) / SCALE, 500.0f / SCALE), world, 1.0f, 3.0f, 0.5f)); // Create a Bird instance with texture, sprite rectangle, and position
             xOffset += 60; // Increment the xOffset for the next bird's position
 	}
+	// Set the initial position of the first bird in the list to be on the sling. The position is calculated based on the sling's position and the defined radius, ensuring that the bird starts at the correct location for launching.
+	Birds[0]->getBody()->setTransform(slingpos.x / SCALE, slingPosition.y / SCALE, 0);// Set the initial position of the first bird in the list to be on the sling
 
 
-    //Creates a pig
-    //Pig PigEnemy("../assets/Ang_Birds/sprite_1.png", sf::IntRect(0, 0, 60, 52), b2Vec2(250.0f / SCALE, 200.0f / SCALE), world, 1.0f, 3.0f, 0.5f); // Create a Pig instance with texture, sprite rectangle, and position
-	//list of pigs
+	// Set the first bird's body type to kinematic, which allows it to be moved directly without being affected by forces or collisions, making it suitable for being positioned on the sling before launch. This ensures that the bird can be dragged and positioned on the sling without being influenced by gravity or other physics interactions until it is launched.
+	Birds[0]->getBody()->SetType(b2_kinematicBody); // Set the first bird's body type to kinematic, which allows it to be moved directly without being affected by forces or collisions, making it suitable for being positioned on the sling before launch.
+    
+    
+    //list of pigs
 	std::vector<std::unique_ptr<Pig>> Pigs;
 
 	//These are the position and size of the different pigs in the sprite sheet. We can use these to create multiple pigs with different appearances. The sf::IntRect constructor takes four parameters: the x and y coordinates of the top-left corner of the rectangle, and the width and height of the rectangle. These rectangles define the portion of the sprite sheet that will be used for each pig's texture.
@@ -205,6 +220,10 @@ int main() {
 		xOffset += 100; // Increment the xOffset for the next pig's position
 
 	}
+
+  
+    int activeBird = 0; //Index of the current active bird in sling
+    
     // --- 7. MAIN LOOP ---
     while (window.isOpen()) {
         sf::Event event;

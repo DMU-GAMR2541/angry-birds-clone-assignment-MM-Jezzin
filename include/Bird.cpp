@@ -8,6 +8,8 @@
 
 Bird::Bird(std::string BirdLoc, sf::IntRect BirdIntRect, b2Vec2 BirdStartPos, b2World& World, float BirdDensity, float BirdFriction, float BirdRestitution) : DynamicObject(BirdLoc, BirdIntRect, BirdStartPos, World, BirdDensity, BirdFriction, BirdRestitution) {
     load(); // When a Bird object is created, it is frozen. This is now here so the pigs arent frozen too.
+
+
 }
 void Bird::load()
 {
@@ -17,8 +19,8 @@ void Bird::load()
     b2_body->SetAwake(false);
     loaded = true;
     fired = false;
+    
 }
-
 
 void Bird::fire(b2Vec2 impulse)
 {
@@ -29,3 +31,7 @@ void Bird::fire(b2Vec2 impulse)
     fired = true;
     loaded = false;
 }
+
+b2Body* Bird::getBody() {
+    return b2_body;
+};
