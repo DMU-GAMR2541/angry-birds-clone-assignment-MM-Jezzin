@@ -7,6 +7,8 @@
 #include <filesystem>
 #include <list> // Include the list header for using std::list - the lists for the different birds and pigs :)
 #include <vector>
+#include <algorithm> // Include the algorithm header for using std::clamp in the catapult dragging system   
+#include <cmath> // Include the cmath header for using mathematical functions like std::sqrt in the catapult dragging system
 
 
 int main() {
@@ -71,19 +73,6 @@ int main() {
 
 
 
-    //Setting up a wall for the ball to hit.
-   // b2BodyDef b2_wallDef;
-   // b2_wallDef.position.Set(750.0f / SCALE, 500.0f / SCALE);
-   // b2Body* b2_wallBody = world.CreateBody(&b2_wallDef);
-
-
-   // b2PolygonShape b2_wallBox;
-    //b2_wallBox.SetAsBox(10.0f / SCALE, 80.0f / SCALE);
-    //b2_wallBody->CreateFixture(&b2_wallBox, 0.0f);
-
-    //sf::RectangleShape sf_wallVisual(sf::Vector2f(20.0f, 160.0f));
-    //sf_wallVisual.setOrigin(10.0f, 80.0f);
-    //sf_wallVisual.setFillColor(sf::Color::Red);
 
     //Rather than having an immovable wall, we can use the dynamic body type to create one that can have velocity etc.
     b2BodyDef b2_plankDef;
@@ -131,7 +120,7 @@ int main() {
     b2BodyDef b2_WallDef3;
     b2_WallDef3.type = b2_dynamicBody;
     b2_WallDef3.position.Set(10.0f / SCALE, 475.0f / SCALE);
-    b2Body* b2_WallBody3 = world.CreateBody(&b2_WallDef2);
+    b2Body* b2_WallBody3 = world.CreateBody(&b2_WallDef3);
 
     b2PolygonShape b2_WallBox3;
     b2_WallBox3.SetAsBox(60.0f / SCALE, 10.0f / SCALE);
@@ -200,7 +189,7 @@ int main() {
             xOffset += 60; // Increment the xOffset for the next bird's position
 	}
 	// Set the initial position of the first bird in the list to be on the sling. The position is calculated based on the sling's position and the defined radius, ensuring that the bird starts at the correct location for launching.
-	Birds[0]->getBody()->setTransform(slingpos.x / SCALE, slingPosition.y / SCALE, 0);// Set the initial position of the first bird in the list to be on the sling
+	Birds[0]->getBody()->SetTransform(b2Vec2(slingpos.x / SCALE, slingpos.y / SCALE), 0);// Set the initial position of the first bird in the list to be on the sling
 
 
 	// Set the first bird's body type to kinematic, which allows it to be moved directly without being affected by forces or collisions, making it suitable for being positioned on the sling before launch. This ensures that the bird can be dragged and positioned on the sling without being influenced by gravity or other physics interactions until it is launched.
@@ -230,18 +219,42 @@ int main() {
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 window.close();
+            //New INPUT HANDLING for catapult using mouse button.
 
-			// INPUT HANDLING: Press SPACE to launchok the ball. We can apply an impulse to the ball to make it move. The impulse is a sudden force applied to an object, which changes its velocity. In Box2D, we can use the ApplyLinearImpulse function to apply an impulse to a body. The impulse is defined as a vector that specifies the direction and magnitude of the force. In this case, we want to apply an impulse in the positive X direction (to the right) and negative Y direction (upwards) to launch the ball towards the targets.
-            if (event.type == sf::Event::KeyPressed) {
-                if (event.key.code == sf::Keyboard::Space) {
-                    // Apply impulse (X-axis, Y-axis) Negative Y is UP in Box2D because gravity is positive.
-                    //b2_ballBody->ApplyLinearImpulse(b2Vec2(5.0f, -5.0f), b2_ballBody->GetWorldCenter(), true);
-                    if (!Birds.empty()) { // Check if there are any birds in the list before trying to access the first one
-                        Birds[0]->fire(b2Vec2(8.0f, -10.0f)); // Apply impulse to the first bird in the list
+			if (event.type == sf::Event::MouseButtonPressed) {
+				if (event.mouseButton.button == sf::Mouse::Left) {
+					// Check if the mouse click is within the sling area
+					if (currentBird < static_cast<int>(Birds.size()) && !launched) { // Check if there are any birds left to launch
+                        Dragging = true; // Set dragging flag to true when the left mouse button is pressed
+					}
+				}
+			}
 
-                        std::cout << "Firing!!!!" << std::endl;
 
-                        //then remove bird and add bird deleted std::cout
+            if (event.type  == sf::Event::MouseButtonReleased) { //On the event that the mouse button is released
+                if (event.mouseButton.button == sf::Mouse::Left) { //If it was the left mouse button that was released
+                    if (Dragging) { //If the user is dragging the bird.
+
+                        Bird* activeBird = Birds[currentBird].get(); // Get a pointer to the current active bird using the currentBird index
+                        b2Body* body = activeBird->getBody(); // Get the Box2D body of the active bird
+
+                        sf::Vector2f birdPos(body->GetPosition().x * SCALE, body->GetPosition().y * SCALE); // Get the current position of the bird in pixels by multiplying the Box2D position by the SCALE factor
+                        sf::Vector2f slingVec = slingpos - birdPos;
+                        // Calculate the vector from the sling position to the bird's position,
+                        // which represents the direction and distance the bird has been dragged from the sling
+                        //This is to work out how far and the strength the bird gets flung.
+
+                        body->SetType(b2_dynamicBody);
+                        // Set the bird's body type to dynamic, when it is launched.
+
+
+                        body->ApplyLinearImpulseToCenter(b2Vec2(slingVec.x * launchForceMultiplier / SCALE, slingVec.y * launchForceMultiplier / SCALE), true);
+                        // Apply a linear impulse to the center of the bird's body, using the slingVec multiplied by the launchForceMultiplier and divided by SCALE to convert it to Box2D units. This impulse will launch the bird in the direction opposite to where it was dragged from the sling, with a strength proportional to how far it was dragged.
+
+
+                        Dragging = false; // Set dragging flag to false when the left mouse button is released, regardless of whether the bird was launched or not
+                        launched = true; // Set launched flag to true when the bird is launched, preventing further dragging or launching until the next bird is selected
+                        activeBird->fired = true; // Set the fired flag of the active bird to true, indicating that it has been launched
                     }
                 }
             }
@@ -249,6 +262,65 @@ int main() {
 
         // Update Physics
         world.Step(1.0f / 60.0f, 8, 3);
+
+        //Catapult Dragging system
+
+        if (Dragging && currentBird < Birds.size()) { //if the player is trying to drag the catapult and there is a bird to launch.
+			Bird* activeBird = Birds[currentBird].get(); // Get pointer to the current active bird using the currentBird index
+			b2Body* body = activeBird->getBody(); // Get the Box2D body of the active bird
+
+			sf::Vector2i mousePos = sf::Mouse::getPosition(window); // Get the current position of the mouse cursor relative to the window
+			
+			//Using static cast to convert the mouse position from integer to float.
+            sf::Vector2f mouseWorld(static_cast<float>(mousePos.x), static_cast<float>(mousePos.y)); 
+            
+			// Calculate the vector from the sling position to the mouse position.
+            sf::Vector2f dragAmount = mouseWorld - slingpos;
+
+			// Limit the drag amount to the defined sling radius to prevent excessive dragging.
+            // This is done by clamping the dragAmount vector's x and y components to the maximum 
+            // allowed values based on the slingRadiusX and slingRadiusY.
+            dragAmount.x = std::clamp(dragAmount.x, -slingRadiusX, slingRadiusX);
+			dragAmount.y = std::clamp(dragAmount.y, -slingRadiusY, slingRadiusY);
+
+			sf::Vector2f finalPosition = slingpos + dragAmount; 
+            // Calculate the final position of the bird based on the sling position and the limited drag amount
+        
+			// Update the bird's position to follow the mouse while dragging
+            // This is done by setting the bird's physics body's transform to the calculated final position
+			body->SetTransform(b2Vec2(finalPosition.x / SCALE, finalPosition.y / SCALE), 0);
+        }
+
+        if (launched) { //If bird has been launched
+
+
+            // Get pointer to the current active bird using the currentBird index
+			Bird* activeBird = Birds[currentBird].get();
+
+            // Get the current speed of the active bird by calculating the length of its linear velocity vector
+			float speed = activeBird->getBody()->GetLinearVelocity().Length(); 
+
+            if (speed < 0.5f) { //f the bird is slowly rolling
+            
+				currentBird++; // Move to the next bird in the list by incrementing the currentBird index
+				launched = false; // Reset the launched flag to false, allowing the next bird to be dragged and launched
+
+                if (currentBird < Birds.size()) { // Check if there are more birds left to launch
+					
+                    // Get pointer to the next bird using the updated currentBird index
+                    Bird* nextBird = Birds[currentBird].get();
+
+					b2Body* nextBody = nextBird->getBody(); // Get the Box2D body of the next bird
+					
+                    // Set the next bird's body type to kinematic,
+                    nextBody->SetType(b2_kinematicBody); 
+
+
+                    // Set the next bird's position to be on the sling, using the defined sling position and scaling it.
+					nextBody->SetTransform(b2Vec2(slingpos.x / SCALE, slingpos.y / SCALE), 0); 
+                }
+            } 
+        }
 
 		for (auto& pig : Pigs) { // Loop through each Pig in the list and update it
 			pig->update(); // Update the Pig instance (if needed)

@@ -1,44 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\2df796cb17fae447a8fae35617a53777\googletest-populate-mkdir.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\f686fd356bdbef60ebfd1e5b3fd9650a\googletest-populate-mkdir.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\2df796cb17fae447a8fae35617a53777\googletest-populate-download.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\f686fd356bdbef60ebfd1e5b3fd9650a\googletest-populate-download.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\2df796cb17fae447a8fae35617a53777\googletest-populate-update.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\f686fd356bdbef60ebfd1e5b3fd9650a\googletest-populate-update.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\2df796cb17fae447a8fae35617a53777\googletest-populate-patch.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\f686fd356bdbef60ebfd1e5b3fd9650a\googletest-populate-patch.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\2df796cb17fae447a8fae35617a53777\googletest-populate-configure.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\f686fd356bdbef60ebfd1e5b3fd9650a\googletest-populate-configure.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\2df796cb17fae447a8fae35617a53777\googletest-populate-build.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\f686fd356bdbef60ebfd1e5b3fd9650a\googletest-populate-build.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\2df796cb17fae447a8fae35617a53777\googletest-populate-install.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\f686fd356bdbef60ebfd1e5b3fd9650a\googletest-populate-install.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\2df796cb17fae447a8fae35617a53777\googletest-populate-test.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\f686fd356bdbef60ebfd1e5b3fd9650a\googletest-populate-test.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\033bc8dfbe95676dd5a05050ebe96cc2\googletest-populate-complete.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\24423e70415d40b1a531386fc216b5c7\googletest-populate-complete.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\39a9b392fee86e71ee0ba8a816dfbdbc\googletest-populate.rule">
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\2e13d9a987e58f07527d1087c8fa87f6\googletest-populate.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\p2873379\Documents\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\googletest-populate" />
+    <None Include="C:\Users\Joseph Dalby\Documents\GitHub\angry-birds-clone-assignment-MM-Jezzin\Build\_deps\googletest-subbuild\CMakeFiles\googletest-populate" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{C0983F00-0692-35E4-B585-08BD907C7447}</UniqueIdentifier>
+      <UniqueIdentifier>{153E08AA-2DC4-3E3A-B4ED-9388E53C1EE4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

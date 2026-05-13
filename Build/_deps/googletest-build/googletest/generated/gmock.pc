@@ -1,5 +1,5 @@
-libdir=C:/Program Files/Annoyed_Flocks/lib
-includedir=C:/Program Files/Annoyed_Flocks/include
+libdir=C:/Program Files (x86)/Annoyed_Flocks/lib
+includedir=C:/Program Files (x86)/Annoyed_Flocks/include
 
 Name: gmock
 Description: GoogleMock (without main() function)
