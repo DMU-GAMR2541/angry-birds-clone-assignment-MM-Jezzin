@@ -28,10 +28,13 @@ int main() {
     sf::Vector2f slingpos(150.0f, 500.0f); // Position of the sling, where the birs is going to sit before it gets catapulted.
     float slingRadiusY = 50.0f; // Radius of the sling, which determines how far the bird can be pulled back before being launched. This is used to limit the distance the bird can be dragged from the sling position, ensuring that the launch force is proportional to how far the bird is pulled back.
     float slingRadiusX = 50.0f; // Radius of the sling in the X direction, which determines how far the bird can be pulled back horizontally before being launched. This is used to limit the distance the bird can be dragged from the sling position in the horizontal direction, ensuring that the launch force is proportional to how far the bird is pulled back horizontally.
-    float launchForceMultiplier = 0.5f; // Multiplier for the launch force, which determines how much force is applied to the bird when it is launched. This is used to adjust the strength of the launch, allowing for fine-tuning of the gameplay experience. A higher multiplier will result in a stronger launch, while a lower multiplier will result in a weaker launch.
+    float launchForceMultiplier = 15.0f; // Multiplier for the launch force, which determines how much force is applied to the bird when it is launched. This is used to adjust the strength of the launch, allowing for fine-tuning of the gameplay experience. A higher multiplier will result in a stronger launch, while a lower multiplier will result in a weaker launch.
 	int currentBird = 0; // Index of the current bird being launched, which is used to keep track of which bird is currently active and being controlled by the player. This allows for managing multiple birds in the game and ensuring that the correct bird is launched when the player interacts with the sling.
 	bool Dragging = false; // Flag to indicate whether the player is currently dragging the bird, which is used to manage the state of the sling and the bird's position. When this flag is true, it indicates that the player is actively dragging the bird, allowing for real-time updates to the bird's position and launch force based on the player's input.
 	bool launched = false; // Flag to indicate whether the bird has been launched, which is used to manage the state of the game and ensure that the bird is only launched once per interaction with the sling. When this flag is true, it indicates that the bird has been launched, preventing further dragging or launching until the next bird is selected.
+	float waitingTimer = 0.0f; // Timer to track the waiting time after a bird is launched, which can be used to implement a delay before allowing the next bird to be launched.
+	float waitingTimeThreshold = 5.0f; // Threshold for the waiting time, which determines how long the player must wait after launching a bird before being able to launch the next one.
+	sf::Clock birdTimer; // Clock to track the time since the last bird was launched.
 
 
     //setup world.
@@ -245,6 +248,7 @@ int main() {
                         //This is to work out how far and the strength the bird gets flung.
 
                         body->SetType(b2_dynamicBody);
+						body->SetGravityScale(1.0f); //Adding gravity so they dont float.
                         // Set the bird's body type to dynamic, when it is launched.
 
 
@@ -254,6 +258,7 @@ int main() {
 
                         Dragging = false; // Set dragging flag to false when the left mouse button is released, regardless of whether the bird was launched or not
                         launched = true; // Set launched flag to true when the bird is launched, preventing further dragging or launching until the next bird is selected
+						birdTimer.restart(); // Restart the bird timer to track the time since the last bird was launched.
                         activeBird->fired = true; // Set the fired flag of the active bird to true, indicating that it has been launched
                     }
                 }
@@ -300,7 +305,7 @@ int main() {
             // Get the current speed of the active bird by calculating the length of its linear velocity vector
 			float speed = activeBird->getBody()->GetLinearVelocity().Length(); 
 
-            if (speed < 0.5f) { //f the bird is slowly rolling
+			if (birdTimer.getElapsedTime().asSeconds() > waitingTimeThreshold) { // If has it been 5 seconds since the bird was launched.
             
 				currentBird++; // Move to the next bird in the list by incrementing the currentBird index
 				launched = false; // Reset the launched flag to false, allowing the next bird to be dragged and launched
@@ -314,10 +319,17 @@ int main() {
 					
                     // Set the next bird's body type to kinematic,
                     nextBody->SetType(b2_kinematicBody); 
-
+					nextBody->SetGravityScale(0.0f); // Set gravity scale to 0 so it doesnt fall off the sling before being launched.
 
                     // Set the next bird's position to be on the sling, using the defined sling position and scaling it.
 					nextBody->SetTransform(b2Vec2(slingpos.x / SCALE, slingpos.y / SCALE), 0); 
+
+
+                    // Reset the next bird's linear velocity to zero to ensure it starts stationary on the sling
+					nextBody->SetLinearVelocity(b2Vec2(0, 0));
+
+					//Set angular velocity to 0 as well.
+					nextBody->SetAngularVelocity(0);
                 }
             } 
         }
