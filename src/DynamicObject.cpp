@@ -4,8 +4,6 @@ const float SCALE = 30.f;
 DynamicObject::DynamicObject(std::string texturePath, sf::IntRect spriteRect, b2Vec2 startPos, b2World& world, float Density, float Friction, float Restitution, ShapeType shapeType, float rotation)
 {
 
-
-
 	DynTextureLoc = texturePath;
 
 	if (!DynTexture.loadFromFile(DynTextureLoc)) { // Load the texture from the specified file
@@ -61,10 +59,11 @@ DynamicObject::DynamicObject(std::string texturePath, sf::IntRect spriteRect, b2
 		b2_body->CreateFixture(&b2_fixtureDef); // Create a fixture for the body using the defined fixture definition, which includes the shape, density, friction, and restitution properties
 
 
-
 }
 
-
+void DynamicObject::setBody(b2Body* body) {
+	b2_body = body; // Set the Box2D body for the DynamicObject, allowing for direct manipulation and access to the physics properties and behaviors of the object in the simulation.
+}
 void DynamicObject::render(sf::RenderWindow & GObjRenderWindow) {
 	GObjRenderWindow.draw(DynSprite); // Draw the sprite on the provided render window
 }

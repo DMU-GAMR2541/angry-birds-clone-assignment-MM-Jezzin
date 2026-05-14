@@ -6,7 +6,7 @@
 
 //Handles Physics and Rendering of the pigs in the game. Pigs are dynamic objects that can interact with other objects and can be affected by forces such as gravity, collisions, and user input. They are the main targets in the game and can be destroyed by the birds launched from the catapult.
 
-class Pig : public virtual DynamicObject { // Pig inherits from DynamicObject
+class Pig : public DynamicObject { // Pig inherits from DynamicObject
 private:
 
 

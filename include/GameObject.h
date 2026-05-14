@@ -8,10 +8,10 @@ public:
 	virtual void update() = 0; // Pure virtual function for updating, must be implemented by derived classes
 
 	GameObject() = default; // Default constructor
-	virtual void TakeDamage(float amount) = 0;
+	virtual void TakeDamage(float damage) = 0;
 	virtual ~GameObject() = default;
 
-	 //
-	float health = 0;
+	bool destroyed = false; // Indicates whether the object is destroyed or not
+	float health = 0.0f;
 
 };

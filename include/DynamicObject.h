@@ -6,7 +6,7 @@
 
 
 
-class DynamicObject : public virtual GameObject {
+class DynamicObject : public GameObject {
 
 private:
 	sf::Sprite DynSprite; //Adds sprite
@@ -46,7 +46,7 @@ public:
 	void update() override;
 	void UpdateSprite();
 
-
+	void setBody(b2Body* body); //Sets the Box2D body for the DynamicObject, allowing it to be associated with a specific physics body in the simulation. This method is essential for enabling physics interactions and ensuring that the object's visual representation is synchronized with its physical behavior in the game world.
 	void impulse(b2Vec2 b2_impulse, bool awake); //Applies a linear impulse to the center of the physics body, allowing for movement and interaction with other objects in the physics simulation. The 'awake' parameter determines whether the body should be awakened if it is currently sleeping, which can affect how the physics engine processes the impulse and updates the body's state accordingly.
 	void setGravityScale(float scale); //Sets the gravity scale for the physics body, allowing for adjustments to how gravity affects the object in the physics simulation. A higher scale will make the object more affected by gravity, while a lower scale will reduce its influence.
 

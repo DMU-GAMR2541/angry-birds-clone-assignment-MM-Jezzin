@@ -33,10 +33,14 @@ void Bird::fire(b2Vec2 impulse)
 }
 
 void Bird::TakeDamage(float damage) {
-	// You can add health and destruction logic here if you want to make the game more complex.
-	std::cout << "Bird took damage: " << damage << std::endl;
-}
+    health -= damage;
 
+	if (health <= 0) {
+		std::cout << "Bird destroyed!" << std::endl;
+		destroyed = true;
+	}
+	std::cout << "Bird took damage: " << damage << std::endl;
+};
 
 b2Body* Bird::getBody() {
     return b2_body;

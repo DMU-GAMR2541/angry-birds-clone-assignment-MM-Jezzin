@@ -114,13 +114,10 @@ int main() {
     // This vector holds different launch force multipliers for each bird, allowing for varying launch strengths based on the type of bird being launched. Each multiplier corresponds to a specific bird in the birdsprites vector, providing a way to customize the launch behavior for different bird types in the game.
 
 
-
-
-
 	int xOffset = -100; // This variable is used to increment the x position of each bird when creating multiple birds. It starts at 100 and is increased by 100 for each subsequent bird, ensuring that the birds are spaced apart horizontally when they are created.
 
 	for (const auto& spriteRect : birdsprites) { // Loop through each sf::IntRect in the birdsprites vector and create a Bird instance for each one, using the corresponding sprite rectangle and position. The position of each bird is determined by the xOffset variable, which is incremented for each bird to ensure they are spaced apart horizontally.
-		Birds.push_back(std::make_unique<Bird>("../assets/Ang_Birds/Angry_Birds.png", spriteRect, b2Vec2((100.0f - xOffset) / SCALE, 500.0f / SCALE), world, 1.0f, 3.0f, 0.5f)); // Create a Bird instance with texture, sprite rectangle, and position
+		Birds.push_back(std::make_unique<Bird>("../assets/Ang_Birds/Angry_Birds.png", spriteRect, b2Vec2(-200.0f / SCALE, -200.0f / SCALE), world, 1.0f, 3.0f, 0.5f)); // Create a Bird instance with texture, sprite rectangle, and position
             xOffset += 60; // Increment the xOffset for the next bird's position
 	}
 	// Set the initial position of the first bird in the list to be on the sling. The position is calculated based on the sling's position and the defined radius, ensuring that the bird starts at the correct location for launching.
@@ -141,11 +138,11 @@ int main() {
 
     //Making seperate pigs so i canplace on on top of the structures.
 
-	Pigs.push_back(std::make_unique<Pig>("../assets/Ang_Birds/Angry_Birds.png", pigsprites[0], b2Vec2((leftX + 20) / SCALE, 390.0f / SCALE), world, 1.0f, 3.0f, 0.5f, 100.0f)); 
+	Pigs.push_back(std::make_unique<Pig>("../assets/Ang_Birds/Angry_Birds.png", pigsprites[0], b2Vec2((leftX + 20) / SCALE, 390.0f / SCALE), world, 1.0f, 3.0f, 0.5f, 20.0f)); 
 
-	Pigs.push_back(std::make_unique<Pig>("../assets/Ang_Birds/Angry_Birds.png", pigsprites[1], b2Vec2((rightX + 20) / SCALE, 370.0f / SCALE), world, 1.0f, 3.0f, 0.5f, 100.0f));
+	Pigs.push_back(std::make_unique<Pig>("../assets/Ang_Birds/Angry_Birds.png", pigsprites[1], b2Vec2((rightX + 20) / SCALE, 370.0f / SCALE), world, 1.0f, 3.0f, 0.5f, 40.0f));
 
-	Pigs.push_back(std::make_unique<Pig>("../assets/Ang_Birds/Angry_Birds.png", pigsprites[2], b2Vec2(innerX / SCALE, 420.0f / SCALE), world, 1.0f, 3.0f, 0.5f, 100.0f));
+	Pigs.push_back(std::make_unique<Pig>("../assets/Ang_Birds/Angry_Birds.png", pigsprites[2], b2Vec2(innerX / SCALE, 420.0f / SCALE), world, 1.0f, 3.0f, 0.5f, 10.0f));
 
     //For the Wood Blocks
     std::vector<sf::IntRect> woodSprites = { sf::IntRect(884, 394, 166, 19), sf::IntRect(884, 394, 166, 19), };
@@ -210,6 +207,23 @@ int main() {
 	Structures.push_back(std::make_unique<Structure>("../assets/Ang_Birds/Angry_Birds_Spritesheet_Blocks.png", boxSprites[0],
 		b2Vec2(innerX  / SCALE, 460.0f / SCALE), world, 1.0f, 0.5f, 0.3f, 0));
 
+    //Catapult
+
+    sf::IntRect catapultRect(58, 533, 78, 196);
+
+
+    sf::Texture catapultTexture;catapultTexture.loadFromFile("../assets/Ang_Birds/Angry_Birds_Spritesheet_Blocks.png");
+
+    sf::Sprite catapultSprite;
+    //setting scale
+    catapultSprite.setScale(0.7f, 0.7f);
+    catapultSprite.setTexture(catapultTexture);
+    catapultSprite.setTextureRect(catapultRect);
+    catapultSprite.setPosition(slingpos.x, slingpos.y + 20); // adjust offset
+    catapultSprite.setOrigin(catapultRect.width / 2.f, catapultRect.height / 2.f);
+
+
+
 
     int activeBird = 0; //Index of the current active bird in sling
     
@@ -229,7 +243,6 @@ int main() {
 					}
 				}
 			}
-
 
             if (event.type  == sf::Event::MouseButtonReleased) { //On the event that the mouse button is released
                 if (event.mouseButton.button == sf::Mouse::Left) { //If it was the left mouse button that was released
@@ -268,6 +281,40 @@ int main() {
 
         // Update Physics
         world.Step(1.0f / 60.0f, 8, 3);
+
+   
+        Pigs.erase(std::remove_if(Pigs.begin(), Pigs.end(),
+            [&](std::unique_ptr<Pig>& pig)
+            {
+                if (pig->destroyed)
+                {
+                    if (pig->getBody())
+                    {
+                        world.DestroyBody(pig->getBody());
+                        pig->setBody(nullptr);
+                    }
+                    return true; // remove from vector
+                }
+                return false;
+            }),
+            Pigs.end());
+
+
+        Structures.erase(std::remove_if(Structures.begin(), Structures.end(),
+            [&](std::unique_ptr<Structure>& s)
+            {
+                if (s->destroyed)
+                {
+                    if (s->getBody())
+                    {
+                        world.DestroyBody(s->getBody());
+                        s->setBody(nullptr);
+                    }
+                    return true; // remove from vector
+                }
+                return false;
+            }),
+            Structures.end());
 
         //Catapult Dragging system
 
@@ -388,7 +435,10 @@ int main() {
         for (auto& structure : Structures) { // Loop through each Structure in the list and render it
             structure->render(window); // Render the Structure instance
         }
+        window.draw(catapultSprite); // Draw the catapult sprite on top of everything else to ensure it is visible during dragging and launching
+
         window.display();
+		
     }
 
     return 0;

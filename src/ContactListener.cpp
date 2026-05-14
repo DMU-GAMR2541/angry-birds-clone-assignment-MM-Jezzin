@@ -2,43 +2,29 @@
 #include "Pig.h"
 #include "Bird.h"
 #include "Structure.h"
-
+#include <iostream>
 #include <cmath>
 
 
-static void* GetUserPointer(b2Body* body) {
-	return reinterpret_cast<void*>(body->GetUserData().pointer);
+static GameObject* GetObject(b2Body* body) { 
+	// Helper function to get the GameObject pointer from a b2Body's user data
+
+	
+	return reinterpret_cast<GameObject*>(body->GetUserData().pointer);
 }
 
-void ContactListener::BeginContact(b2Contact* contact) {
+void ContactListener::BeginContact(b2Contact* contact)
+{
+    auto* objA = reinterpret_cast<GameObject*>(
+        contact->GetFixtureA()->GetBody()->GetUserData().pointer);
 
-	//std::cout << "Collision detected!" << std::endl;
-	b2Body* bodyA = contact->GetFixtureA()->GetBody();
-	b2Body* bodyB = contact->GetFixtureB()->GetBody();
-	// Get the user data pointers for both bodies
-    
-	auto* objA = reinterpret_cast<GameObject*>(bodyA->GetUserData().pointer);
-	auto* objB = reinterpret_cast<GameObject*>(bodyB->GetUserData().pointer);
+    auto* objB = reinterpret_cast<GameObject*>(
+        contact->GetFixtureB()->GetBody()->GetUserData().pointer);
 
-	//std::cout << "A ptr: " << objA << " B ptr: " << objB << "\n";
+    if (!objA || !objB) return;
 
-	if (!objA || !objB) return;
+    float damage = 1.0f; 
 
-	if (objA || objB) {
-		// If either object is null, we can't process the collision
-		return;
-	}
-
-	b2Vec2 vA = bodyA->GetLinearVelocity();
-	b2Vec2 vB = bodyB->GetLinearVelocity();
-	float impact = (vA - vB).Length();
-
-	if (impact < 0.5f) return; // Ignore minor collisions that don't cause significant damage
-
-	float damage = impact * 5.0f; // Scale the damage based on the impact velocity
-
-	std::cout << "Impact: " << impact << " Damage: " << damage << "\n";
-
-	objA->TakeDamage(damage);
-	objB->TakeDamage(damage);
+    objA->TakeDamage(damage);
+    objB->TakeDamage(damage);
 }

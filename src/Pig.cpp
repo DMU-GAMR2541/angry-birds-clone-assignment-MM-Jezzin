@@ -19,5 +19,6 @@ void Pig::TakeDamage(float damage) {
 	if (health <= 0) { // If the pig's health drops to zero or below, it is considered destroyed.
 		// Here you can add code to remove the pig from the game, play a destruction animation, etc.
 		std::cout << "Pig destroyed!" << std::endl;
+		destroyed = true;
 	}
 };
