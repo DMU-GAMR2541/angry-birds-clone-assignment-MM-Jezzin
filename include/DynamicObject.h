@@ -21,6 +21,8 @@ private:
 	b2FixtureDef b2_fixtureDef;
 	b2CircleShape b2_dynamicCircle;
 	
+	
+
 protected:
 	b2Body* b2_body;
 
@@ -28,7 +30,7 @@ public:
 	DynamicObject() = default; // Default constructor
 
 
-	enum ShapeType { Circle, Box };
+	enum class ShapeType { Circle, Box };
 
 
 	virtual ~DynamicObject() = default; // Virtual destructor to ensure proper cleanup of derived classes

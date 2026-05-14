@@ -15,7 +15,7 @@ public:
 
 	//Initializes a Pig object with the specified parameters.
 
-	Pig(std::string PigLoc, sf::IntRect PigIntRect, b2Vec2 PigStartPos, b2World& World, float PigDensity, float PigFriction, float PigRestitution) : DynamicObject(PigLoc, PigIntRect, PigStartPos, World, PigDensity, PigFriction, PigRestitution) {};
+	Pig(std::string PigLoc, sf::IntRect PigIntRect, b2Vec2 PigStartPos, b2World& World, float PigDensity, float PigFriction, float PigRestitution) : DynamicObject(PigLoc, PigIntRect, PigStartPos, World, PigDensity, PigFriction, PigRestitution, ShapeType::Circle) {};
 	
 	
 };
