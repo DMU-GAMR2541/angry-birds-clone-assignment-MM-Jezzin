@@ -1,7 +1,7 @@
 #include "DynamicObject.h"
 
 const float SCALE = 30.f;
-DynamicObject::DynamicObject(std::string texturePath, sf::IntRect spriteRect, b2Vec2 startPos, b2World& world, float Density, float Friction, float Restitution, ShapeType shapeType)
+DynamicObject::DynamicObject(std::string texturePath, sf::IntRect spriteRect, b2Vec2 startPos, b2World& world, float Density, float Friction, float Restitution, ShapeType shapeType, float rotation)
 {
 
 

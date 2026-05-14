@@ -41,6 +41,8 @@ int main() {
     float startX = 700.0f;
     float startY = 500.0f;
 
+    
+
 
     //setup world.
     b2Vec2 b2_gravity(0.0f, 9.8f); // Earth-like gravity
@@ -78,99 +80,6 @@ int main() {
     sf::RectangleShape sf_groundVisual(sf::Vector2f(1200.0f, 20.0f));
     sf_groundVisual.setOrigin(400.0f, 10.0f);
     sf_groundVisual.setFillColor(sf::Color(34, 139, 34)); // Forest Green
-
-
-
-
-    //Rather than having an immovable wall, we can use the dynamic body type to create one that can have velocity etc.
-    b2BodyDef b2_plankDef;
-
-    b2_plankDef.type = b2_dynamicBody;
-    b2_plankDef.position.Set(550.0f / SCALE, 450.0f / SCALE);
-    b2Body* b2_plankBody = world.CreateBody(&b2_plankDef);
-
-    b2PolygonShape b2_plankBox;
-    b2_plankBox.SetAsBox(10.0f / SCALE, 60.0f / SCALE);
-
-    b2FixtureDef b2_plankFixture;
-    b2_plankFixture.shape = &b2_plankBox;
-    b2_plankFixture.density = 1.5f;   // Light wood
-    b2_plankFixture.friction = 0.3f;
-    b2_plankBody->CreateFixture(&b2_plankFixture);
-
-    sf::RectangleShape sf_plankVisual(sf::Vector2f(20.0f, 120.0f));
-    sf_plankVisual.setOrigin(10.0f, 60.0f);
-    sf_plankVisual.setFillColor(sf::Color(139, 69, 19)); // Brown
-
-    //Another block. (IDK what to call it yet)
-    b2BodyDef b2_WallDef2;
-	b2_WallDef2.type = b2_dynamicBody;
-    b2_WallDef2.position.Set(800.0f / SCALE, 500.0f / SCALE);
-    b2Body* b2_WallBody2 = world.CreateBody(&b2_WallDef2);
-
-	b2PolygonShape b2_WallBox2;
-	b2_WallBox2.SetAsBox(10.0f / SCALE, 60.0f / SCALE);
-
-	b2FixtureDef b2_WallFixture2;
-	b2_WallFixture2.shape = &b2_WallBox2;
-	b2_WallFixture2.density = 1.0f;   // Light wood
-	b2_WallFixture2.friction = 0.3f;
-	b2_WallBody2->CreateFixture(&b2_WallFixture2);
-
-    //Vizualisation of block 2.
-    sf::RectangleShape sf_WallVisual2(sf::Vector2f(20.0f, 120.0f));
-    sf_WallVisual2.setOrigin(10.0f, 60.0f);
-    sf_WallVisual2.setFillColor(sf::Color(139, 69, 19)); // Brown
-
-
-
-    //Another block. (IDK what to call it yet)
-    b2BodyDef b2_WallDef3;
-    b2_WallDef3.type = b2_dynamicBody;
-    b2_WallDef3.position.Set(10.0f / SCALE, 475.0f / SCALE);
-    b2Body* b2_WallBody3 = world.CreateBody(&b2_WallDef3);
-
-    b2PolygonShape b2_WallBox3;
-    b2_WallBox3.SetAsBox(60.0f / SCALE, 10.0f / SCALE);
-
-    b2FixtureDef b2_WallFixture3;
-    b2_WallFixture3.shape = &b2_WallBox3;
-    b2_WallFixture3.density = 1.0f;   // Light wood
-    b2_WallFixture3.friction = 0.3f;
-    b2_WallBody3->CreateFixture(&b2_WallFixture3);
-
-    //Vizualisation of block 3
-    sf::RectangleShape sf_WallVisual3(sf::Vector2f(120.0f, 20.0f));
-    sf_WallVisual3.setOrigin(60.0f, 10.0f);
-    sf_WallVisual3.setFillColor(sf::Color(139, 69, 19)); // Brown
-
-
-
-
-
-    //Create a ball that is fired when space is pressed. We need to first have a dynamic ball to do it.
-    b2BodyDef b2_ballDef;
-    b2_ballDef.type = b2_dynamicBody;
-    b2_ballDef.position.Set(100.0f / SCALE, 500.0f / SCALE);
-    b2Body* b2_ballBody = world.CreateBody(&b2_ballDef);
-
-    b2CircleShape b2_circleShape;
-    b2_circleShape.m_radius = 15.0f / SCALE;
-
-    b2FixtureDef b2_ballFixture;
-    b2_ballFixture.shape = &b2_circleShape;
-    b2_ballFixture.density = 1.0f;
-    b2_ballFixture.restitution = 0.5f; // Bounciness
-    b2_ballBody->CreateFixture(&b2_ballFixture);
-
-    sf::CircleShape sf_ballVisual(15.0f);
-    sf_ballVisual.setOrigin(15.0f, 15.0f);
-    sf_ballVisual.setFillColor(sf::Color::Yellow);
-
-
-
-
-  
 
     //Adding physics to the sprites
 
@@ -223,13 +132,6 @@ int main() {
 		xOffset += 100; // Increment the xOffset for the next pig's position
 
 	}
-
-
-    //Now need to do the same for structures.
-
-   
-
-
     //For the Wood Blocks
     std::vector<sf::IntRect> woodSprites = { sf::IntRect(884, 394, 166, 19), sf::IntRect(884, 394, 166, 19), };
 
@@ -242,16 +144,38 @@ int main() {
     // List to hold dynamic objects that make up the structures in the game
     std::vector<std::unique_ptr<Structure>> Structures;
 
-    for (int i = 0; i < 4; i++) { //simple loop for now.
-        Structures.push_back(std::make_unique<Structure>( // adds new block to structure vector 
-            "../assets/Ang_Birds/Angry_Birds_Spritesheet_Blocks.png",stoneSprites[i % stoneSprites.size()], 
-			//using % to prevent crash if we have more blocks than sprites, it will loop back through the sprites.
-			b2Vec2((startX + i * 65) / SCALE, startY / SCALE), world, 2.0f, 0.6f, 0.1f //density, friction, restitution.
+   // for (int i = 0; i < 4; i++) { //simple loop for now.
+    //    Structures.push_back(std::make_unique<Structure>( // adds new block to structure vector 
+    //        "../assets/Ang_Birds/Angry_Birds_Spritesheet_Blocks.png",stoneSprites[i % stoneSprites.size()], 
+	//		//using % to prevent crash if we have more blocks than sprites, it will loop back through the sprites.
+	//		b2Vec2((startX + i * 65) / SCALE, startY / SCALE), world, 2.0f, 0.6f, 0.1f //density, friction, restitution.
 
            
-        ));
-    }
+   //     ));
+   // }
   
+     //BUILDING THE MAP//
+
+    //Guide for which way you want the beams:
+    //0 = flat
+	//1 = vertical
+	//b2_pi / 2 = vertical 
+    //b2_pi = upside down
+
+    //Bottom Beams (holding it up)
+    Structures.push_back(std::make_unique<Structure>("../assets/Ang_Birds/Angry_Birds_Spritesheet_Blocks.png", woodSprites[0],
+        b2Vec2(780.0f / SCALE, 500.0f / SCALE), world, 1.0f, 0.5f, 0.3f, b2_pi / 2));
+	
+    Structures.push_back(std::make_unique<Structure>("../assets/Ang_Birds/Angry_Birds_Spritesheet_Blocks.png", woodSprites[0],
+        b2Vec2(880.0f / SCALE, 500.0f / SCALE), world, 1.0f, 0.5f, 0.3f, b2_pi / 2));
+
+	//Top Beams (holding it up)
+	Structures.push_back(std::make_unique<Structure>("../assets/Ang_Birds/Angry_Birds_Spritesheet_Blocks.png", stoneSprites[0],
+		b2Vec2(825.0f / SCALE, 430.0f / SCALE), world, 3.0f, 0.8f, 0.05f, 0));
+	//Ice blocks (the ones that are easier to break)
+	Structures.push_back(std::make_unique<Structure>("../assets/Ang_Birds/Angry_Birds_Spritesheet_Blocks.png", iceSprites[0],
+		b2Vec2(825.0f / SCALE, 360.0f / SCALE), world, 0.5f, 0.1f, 0.3f, 0));
+
     int activeBird = 0; //Index of the current active bird in sling
     
     // --- 7. MAIN LOOP ---
@@ -336,6 +260,7 @@ int main() {
 			// Update the bird's position to follow the mouse while dragging
             // This is done by setting the bird's physics body's transform to the calculated final position
 			body->SetTransform(b2Vec2(finalPosition.x / SCALE, finalPosition.y / SCALE), 0);
+
         }
 
         if (launched) { //If bird has been launched
@@ -343,35 +268,41 @@ int main() {
 
             // Get pointer to the current active bird using the currentBird index
 			Bird* activeBird = Birds[currentBird].get();
+			b2Body* body = activeBird->getBody(); // Get the Box2D body of the active bird
 
             // Get the current speed of the active bird by calculating the length of its linear velocity vector
 			float speed = activeBird->getBody()->GetLinearVelocity().Length(); 
 
-			if (birdTimer.getElapsedTime().asSeconds() > waitingTimeThreshold) { // If has it been 5 seconds since the bird was launched.
-            
-				currentBird++; // Move to the next bird in the list by incrementing the currentBird index
-				launched = false; // Reset the launched flag to false, allowing the next bird to be dragged and launched
+            if (birdTimer.getElapsedTime().asSeconds() > waitingTimeThreshold) { // If has it been 5 seconds since the bird was launched.
+
+                Bird* oldBird = Birds[currentBird].get(); // Get pointer to the current active bird using the currentBird index
+                b2Body* oldBody = oldBird->getBody(); // Get the Box2D body of the current active bird
+
+
+                world.DestroyBody(body);
+                launched = false; // Reset the launched flag to false, allowing the next bird to be dragged and launched
+                currentBird++; // Move to the next bird in the list by incrementing the currentBird index
 
                 if (currentBird < Birds.size()) { // Check if there are more birds left to launch
-					
+
                     // Get pointer to the next bird using the updated currentBird index
                     Bird* nextBird = Birds[currentBird].get();
 
-					b2Body* nextBody = nextBird->getBody(); // Get the Box2D body of the next bird
-					
+                    b2Body* nextBody = nextBird->getBody(); // Get the Box2D body of the next bird
+
                     // Set the next bird's body type to kinematic,
-                    nextBody->SetType(b2_kinematicBody); 
-					nextBody->SetGravityScale(0.0f); // Set gravity scale to 0 so it doesnt fall off the sling before being launched.
+                    nextBody->SetType(b2_kinematicBody);
+                    nextBody->SetGravityScale(0.0f); // Set gravity scale to 0 so it doesnt fall off the sling before being launched.
 
                     // Set the next bird's position to be on the sling, using the defined sling position and scaling it.
-					nextBody->SetTransform(b2Vec2(slingpos.x / SCALE, slingpos.y / SCALE), 0); 
+                    nextBody->SetTransform(b2Vec2(slingpos.x / SCALE, slingpos.y / SCALE), 0);
 
+                
+                // Reset the next bird's linear velocity to zero to ensure it starts stationary on the sling
+                nextBody->SetLinearVelocity(b2Vec2(0, 0));
 
-                    // Reset the next bird's linear velocity to zero to ensure it starts stationary on the sling
-					nextBody->SetLinearVelocity(b2Vec2(0, 0));
-
-					//Set angular velocity to 0 as well.
-					nextBody->SetAngularVelocity(0);
+                //Set angular velocity to 0 as well.
+                nextBody->SetAngularVelocity(0);
                 }
             } 
         }
@@ -391,44 +322,20 @@ int main() {
 			structure->UpdateSprite();
 		}
 
-		//bird.update(); // Update the Bird instance (if needed)
-		//bird.UpdateSprite(); // Update the Bird's sprite position based on its physics body
-
         //All of the visuals needs to be synced with the physics.
-
-        sf_ballVisual.setPosition(b2_ballBody->GetPosition().x * SCALE, b2_ballBody->GetPosition().y * SCALE);
-        sf_ballVisual.setRotation(b2_ballBody->GetAngle() * (180.0f / PI));
 
         //Static objects usually don't move, but we set the position once.
         sf_groundVisual.setPosition(b2_groundBody->GetPosition().x * SCALE, b2_groundBody->GetPosition().y * SCALE);
        // sf_wallVisual.setPosition(b2_wallBody->GetPosition().x * SCALE, b2_wallBody->GetPosition().y * SCALE);
 
-        // Dynamic wall.
-        sf_plankVisual.setPosition(b2_plankBody->GetPosition().x * SCALE, b2_plankBody->GetPosition().y * SCALE);
-        sf_plankVisual.setRotation(b2_plankBody->GetAngle() * (180.0f / PI));
-
 		// Right wall
 		sf_rightWallVisual.setPosition(b2_rightWallBody->GetPosition().x * SCALE, b2_rightWallBody->GetPosition().y * SCALE);
-        
-        
-		// Block 2
-		sf_WallVisual2.setPosition(b2_WallBody2->GetPosition().x * SCALE, b2_WallBody2->GetPosition().y * SCALE);
-		sf_WallVisual2.setRotation(b2_WallBody2->GetAngle() * (180.0f / PI));
-
-		// Block 3
-		sf_WallVisual3.setPosition(b2_WallBody3->GetPosition().x * SCALE, b2_WallBody3->GetPosition().y * SCALE);
-		sf_WallVisual3.setRotation(b2_WallBody3->GetAngle() * (180.0f / PI));
-
+    
         //Render all of the content at each frame. Remember you need to clear the screen each iteration or artefacts remain.
         window.clear(sf::Color(135, 206, 235)); // Sky Blue
 
         window.draw(sf_groundVisual);
-       // window.draw(sf_wallVisual);
-        window.draw(sf_plankVisual);
-        window.draw(sf_ballVisual);
 		window.draw(sf_rightWallVisual);
-		window.draw(sf_WallVisual2);
-		window.draw(sf_WallVisual3);
 		
 		for (auto& pig : Pigs) { // Loop through each Pig in the list and render it
 			pig->render(window); // Render the Pig instance
