@@ -32,6 +32,12 @@ void Bird::fire(b2Vec2 impulse)
     loaded = false;
 }
 
+void Bird::TakeDamage(float damage) {
+	// You can add health and destruction logic here if you want to make the game more complex.
+	std::cout << "Bird took damage: " << damage << std::endl;
+}
+
+
 b2Body* Bird::getBody() {
     return b2_body;
 };

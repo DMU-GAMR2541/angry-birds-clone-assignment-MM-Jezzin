@@ -5,6 +5,8 @@
 #include "Pig.h"
 #include "Structure.h" 
 
+#include "ContactListener.h"
+
 #include <filesystem>
 #include <list> // Include the list header for using std::list - the lists for the different birds and pigs :)
 #include <vector>
@@ -53,6 +55,11 @@ int main() {
     b2Vec2 b2_gravity(0.0f, 9.8f); // Earth-like gravity
     b2World world(b2_gravity);
 
+
+    ContactListener contactListener;
+    world.SetContactListener(&contactListener);
+
+
     //Setup ground for the circle to move / bounce on.
     //Needs to have a body definition and a body. We use a raw pointer for the b2Body as Box2d does the management itself.
     //A body can be defined as having a position, velocity, and mass. 
@@ -92,11 +99,6 @@ int main() {
 	b2BodyDef b2_BodyDef;
 	b2FixtureDef b2_fixtureDef;
 	b2Body* b2_body;
-
-    //ContactListener
-    
-    ContactListener contactListener;
-	world.SetContactListener(&contactListener);
 
 	//list of birds and pigs
 	std::vector<std::unique_ptr<Bird>> Birds;
@@ -139,11 +141,11 @@ int main() {
 
     //Making seperate pigs so i canplace on on top of the structures.
 
-	Pigs.push_back(std::make_unique<Pig>("../assets/Ang_Birds/Angry_Birds.png", pigsprites[0], b2Vec2((leftX + 20) / SCALE, 390.0f / SCALE), world, 1.0f, 3.0f, 0.5f)); 
+	Pigs.push_back(std::make_unique<Pig>("../assets/Ang_Birds/Angry_Birds.png", pigsprites[0], b2Vec2((leftX + 20) / SCALE, 390.0f / SCALE), world, 1.0f, 3.0f, 0.5f, 100.0f)); 
 
-	Pigs.push_back(std::make_unique<Pig>("../assets/Ang_Birds/Angry_Birds.png", pigsprites[1], b2Vec2((rightX + 20) / SCALE, 370.0f / SCALE), world, 1.0f, 3.0f, 0.5f));
+	Pigs.push_back(std::make_unique<Pig>("../assets/Ang_Birds/Angry_Birds.png", pigsprites[1], b2Vec2((rightX + 20) / SCALE, 370.0f / SCALE), world, 1.0f, 3.0f, 0.5f, 100.0f));
 
-	Pigs.push_back(std::make_unique<Pig>("../assets/Ang_Birds/Angry_Birds.png", pigsprites[2], b2Vec2(innerX / SCALE, 420.0f / SCALE), world, 1.0f, 3.0f, 0.5f));
+	Pigs.push_back(std::make_unique<Pig>("../assets/Ang_Birds/Angry_Birds.png", pigsprites[2], b2Vec2(innerX / SCALE, 420.0f / SCALE), world, 1.0f, 3.0f, 0.5f, 100.0f));
 
     //For the Wood Blocks
     std::vector<sf::IntRect> woodSprites = { sf::IntRect(884, 394, 166, 19), sf::IntRect(884, 394, 166, 19), };

@@ -17,5 +17,5 @@ public:
 	Pig(std::string PigLoc, sf::IntRect PigIntRect, b2Vec2 PigStartPos, b2World& World, float PigDensity, float PigFriction, float PigRestitution, float maxHealth);
 
 
-	void TakeDamage(float damage); //Reduces the pig's health by the specified damage amount. If the pig's health drops to zero or below, it is considered destroyed and can be removed from the game.p
-}
+	void TakeDamage(float damage) override; //Reduces the pig's health by the specified damage amount. If the pig's health drops to zero or below, it is considered destroyed and can be removed from the game.p
+};

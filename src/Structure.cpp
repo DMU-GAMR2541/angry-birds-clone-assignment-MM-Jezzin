@@ -16,3 +16,15 @@ void Structure::update() {
 	    b2_body->SetAwake(false); // Set the structure's body to sleep.
     }
 }
+
+void Structure::TakeDamage(float damage) {
+	// Need to add health 
+	health -= damage; // Reduce the structure's health by the specified damage amount.
+	std::cout << "Structure took damage: " << damage << std::endl;
+
+
+		if (health <= 0) { // If the structure's health drops to 0
+				std::cout << "Structure destroyed!" << std::endl;
+		}
+
+}

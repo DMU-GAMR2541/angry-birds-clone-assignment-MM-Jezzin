@@ -24,6 +24,9 @@ DynamicObject::DynamicObject(std::string texturePath, sf::IntRect spriteRect, b2
 	b2_BodyDef.position = startPos; // Set the initial position of the body in the physics world using the provided starting position
 	b2_body = world.CreateBody(&b2_BodyDef); // Create the body in the Box2D world using the defined body definition
 
+	if (!b2_body) return; // Check if the body was successfully created, and if not, exit the constructor to prevent further initialization
+
+
 
 	b2_body->GetUserData().pointer = reinterpret_cast<uintptr_t>(this);
 	// Set the user data of the Box2D body to point to the current DynamicObject instance, 

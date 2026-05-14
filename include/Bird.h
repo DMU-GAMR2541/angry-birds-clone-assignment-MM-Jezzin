@@ -12,7 +12,12 @@ public:
 
     void load();
     void fire(b2Vec2 impulse);
+
+
     b2Body* getBody();
+
+    void TakeDamage(float damage) override;
+
     bool loaded = true;
     bool fired = false;
    
