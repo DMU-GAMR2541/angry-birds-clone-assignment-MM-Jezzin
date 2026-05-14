@@ -33,6 +33,10 @@ public:
 	enum class ShapeType { Circle, Box };
 
 
+	b2Body* getBody() { return b2_body; } 
+	//Returns a pointer to the Box2D body associated with the DynamicObject, 
+	// allowing access to its properties and methods for physics interactions and manipulations.
+
 	virtual ~DynamicObject() = default; // Virtual destructor to ensure proper cleanup of derived classes
 	//Initializes a DynamicObject with the specified parameters.
 	DynamicObject(std::string texturePath, sf::IntRect spriteRect, b2Vec2 startPos, b2World& world, float Density, float Friction, float Restitution, ShapeType shapeType, float rotation = 0.0f);

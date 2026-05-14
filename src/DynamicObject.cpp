@@ -18,9 +18,16 @@ DynamicObject::DynamicObject(std::string texturePath, sf::IntRect spriteRect, b2
 	DynSprite.setOrigin(spriteRect.width / 2.f, spriteRect.height / 2.f); // Set the origin of the sprite to its center, which allows for proper rotation around the middle.
 
 
+
+
 	b2_BodyDef.type = b2_dynamicBody; // Set the body type to dynamic, which means it will be affected by forces and collisions in the physics simulation
 	b2_BodyDef.position = startPos; // Set the initial position of the body in the physics world using the provided starting position
 	b2_body = world.CreateBody(&b2_BodyDef); // Create the body in the Box2D world using the defined body definition
+
+
+	b2_body->GetUserData().pointer = reinterpret_cast<uintptr_t>(this);
+	// Set the user data of the Box2D body to point to the current DynamicObject instance, 
+	//allowing for easy access to the object during collision detection and other physics interactions.
 
 	//Shape Switch between pig, bird and structure
 

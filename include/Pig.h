@@ -14,8 +14,8 @@ public:
 	Pig() = default; // Default constructor
 
 	//Initializes a Pig object with the specified parameters.
+	Pig(std::string PigLoc, sf::IntRect PigIntRect, b2Vec2 PigStartPos, b2World& World, float PigDensity, float PigFriction, float PigRestitution, float maxHealth);
 
-	Pig(std::string PigLoc, sf::IntRect PigIntRect, b2Vec2 PigStartPos, b2World& World, float PigDensity, float PigFriction, float PigRestitution) : DynamicObject(PigLoc, PigIntRect, PigStartPos, World, PigDensity, PigFriction, PigRestitution, ShapeType::Circle) {};
-	
-	
-};
+
+	void TakeDamage(float damage); //Reduces the pig's health by the specified damage amount. If the pig's health drops to zero or below, it is considered destroyed and can be removed from the game.p
+}

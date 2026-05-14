@@ -93,6 +93,11 @@ int main() {
 	b2FixtureDef b2_fixtureDef;
 	b2Body* b2_body;
 
+    //ContactListener
+    
+    ContactListener contactListener;
+	world.SetContactListener(&contactListener);
+
 	//list of birds and pigs
 	std::vector<std::unique_ptr<Bird>> Birds;
     
@@ -346,8 +351,10 @@ int main() {
 
 		//Update the structure blocks
 		for (auto& structure : Structures) { // Loop through each Structure in the list and update it
-			structure->update(); // Update the Structure instance (if needed)
+              // Update the Structure instance (if needed)
+			structure->update();
 			structure->UpdateSprite();
+
 		}
 
         //All of the visuals needs to be synced with the physics.
