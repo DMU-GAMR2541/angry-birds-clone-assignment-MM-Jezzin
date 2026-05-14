@@ -41,8 +41,13 @@ int main() {
     float startX = 700.0f;
     float startY = 500.0f;
 
-    
 
+    //Anchor points for beams, then can just add onto that if i want to duplicate
+	float baseY = 500.0f;
+	float leftX = 780.0f;
+    float midX = 900.0f;
+	float rightX = 1020.0f;
+    float innerX = 900.0f; // X position for the inner structure.
 
     //setup world.
     b2Vec2 b2_gravity(0.0f, 9.8f); // Earth-like gravity
@@ -125,13 +130,16 @@ int main() {
 	//These are the position and size of the different pigs in the sprite sheet. We can use these to create multiple pigs with different appearances. The sf::IntRect constructor takes four parameters: the x and y coordinates of the top-left corner of the rectangle, and the width and height of the rectangle. These rectangles define the portion of the sprite sheet that will be used for each pig's texture.
 	std::vector<sf::IntRect>pigsprites = { sf::IntRect(928, 447, 80, 80),sf::IntRect(733, 155, 110, 100),sf::IntRect(732, 856, 60, 45) };
 
-	xOffset = 0; // Reset xOffset for pigs
 
-	for (const auto& spriteRect : pigsprites) {
-		Pigs.push_back(std::make_unique<Pig>("../assets/Ang_Birds/Angry_Birds.png", spriteRect, b2Vec2((500.0f + xOffset) / SCALE, 200.0f / SCALE), world, 1.0f, 3.0f, 0.5f)); // Create a Pig instance with texture, sprite rectangle, and position
-		xOffset += 100; // Increment the xOffset for the next pig's position
 
-	}
+    //Making seperate pigs so i canplace on on top of the structures.
+
+	Pigs.push_back(std::make_unique<Pig>("../assets/Ang_Birds/Angry_Birds.png", pigsprites[0], b2Vec2((leftX + 20) / SCALE, 390.0f / SCALE), world, 1.0f, 3.0f, 0.5f)); 
+
+	Pigs.push_back(std::make_unique<Pig>("../assets/Ang_Birds/Angry_Birds.png", pigsprites[1], b2Vec2((rightX + 20) / SCALE, 370.0f / SCALE), world, 1.0f, 3.0f, 0.5f));
+
+	Pigs.push_back(std::make_unique<Pig>("../assets/Ang_Birds/Angry_Birds.png", pigsprites[2], b2Vec2(innerX / SCALE, 420.0f / SCALE), world, 1.0f, 3.0f, 0.5f));
+
     //For the Wood Blocks
     std::vector<sf::IntRect> woodSprites = { sf::IntRect(884, 394, 166, 19), sf::IntRect(884, 394, 166, 19), };
 
@@ -141,18 +149,13 @@ int main() {
     //For the Stone Blocks
 	std::vector<sf::IntRect> stoneSprites = { sf::IntRect(1417, 403, 166, 19), sf::IntRect(1417, 403, 166, 19), };
 
+	//For Box Blocks
+	std::vector<sf::IntRect> boxSprites = { sf::IntRect(472, 1124, 79, 83) };
+
     // List to hold dynamic objects that make up the structures in the game
     std::vector<std::unique_ptr<Structure>> Structures;
 
-   // for (int i = 0; i < 4; i++) { //simple loop for now.
-    //    Structures.push_back(std::make_unique<Structure>( // adds new block to structure vector 
-    //        "../assets/Ang_Birds/Angry_Birds_Spritesheet_Blocks.png",stoneSprites[i % stoneSprites.size()], 
-	//		//using % to prevent crash if we have more blocks than sprites, it will loop back through the sprites.
-	//		b2Vec2((startX + i * 65) / SCALE, startY / SCALE), world, 2.0f, 0.6f, 0.1f //density, friction, restitution.
 
-           
-   //     ));
-   // }
   
      //BUILDING THE MAP//
 
@@ -164,17 +167,42 @@ int main() {
 
     //Bottom Beams (holding it up)
     Structures.push_back(std::make_unique<Structure>("../assets/Ang_Birds/Angry_Birds_Spritesheet_Blocks.png", woodSprites[0],
-        b2Vec2(780.0f / SCALE, 500.0f / SCALE), world, 1.0f, 0.5f, 0.3f, b2_pi / 2));
+        b2Vec2(leftX / SCALE, baseY / SCALE), world, 1.0f, 1.5f, 0.0f, b2_pi / 2));
 	
-    Structures.push_back(std::make_unique<Structure>("../assets/Ang_Birds/Angry_Birds_Spritesheet_Blocks.png", woodSprites[0],
-        b2Vec2(880.0f / SCALE, 500.0f / SCALE), world, 1.0f, 0.5f, 0.3f, b2_pi / 2));
 
-	//Top Beams (holding it up)
+    //Adding 40 on the x axid to move it to the right
+    Structures.push_back(std::make_unique<Structure>("../assets/Ang_Birds/Angry_Birds_Spritesheet_Blocks.png", woodSprites[0],
+        b2Vec2((leftX + 40) / SCALE, baseY / SCALE), world, 1.0f, 1.5f, 0.0f, b2_pi / 2));
+
+
+	//Top Beams (pig on top)
 	Structures.push_back(std::make_unique<Structure>("../assets/Ang_Birds/Angry_Birds_Spritesheet_Blocks.png", stoneSprites[0],
-		b2Vec2(825.0f / SCALE, 430.0f / SCALE), world, 3.0f, 0.8f, 0.05f, 0));
+		b2Vec2((leftX + 20) / SCALE, 430.0f / SCALE), world, 3.0f, 1.8f, 0.00f, 0));
+
+    //Now the structure on the right (using rightX)
+
+	Structures.push_back(std::make_unique<Structure>("../assets/Ang_Birds/Angry_Birds_Spritesheet_Blocks.png", woodSprites[0],
+		b2Vec2(rightX / SCALE, baseY / SCALE), world, 1.0f, 0.5f, 0.0f, b2_pi / 2));
+
+	Structures.push_back(std::make_unique<Structure>("../assets/Ang_Birds/Angry_Birds_Spritesheet_Blocks.png", woodSprites[0],
+		b2Vec2((rightX + 40) / SCALE, baseY / SCALE), world, 1.0f, 1.5f, 0.0f, b2_pi / 2));
+
 	//Ice blocks (the ones that are easier to break)
 	Structures.push_back(std::make_unique<Structure>("../assets/Ang_Birds/Angry_Birds_Spritesheet_Blocks.png", iceSprites[0],
-		b2Vec2(825.0f / SCALE, 360.0f / SCALE), world, 0.5f, 0.1f, 0.3f, 0));
+		b2Vec2((rightX + 20) / SCALE, 430.0f / SCALE), world, 0.5f, 0.5f, 0.0f, 0));
+
+
+    //Then another sctructure in the middle
+
+    //The top
+	Structures.push_back(std::make_unique<Structure>("../assets/Ang_Birds/Angry_Birds_Spritesheet_Blocks.png", boxSprites[0],
+		b2Vec2(innerX / SCALE, 500.0f / SCALE), world, 0.5f, 0.1f, 0.3f, 0));
+
+    //The bottom
+
+	Structures.push_back(std::make_unique<Structure>("../assets/Ang_Birds/Angry_Birds_Spritesheet_Blocks.png", boxSprites[0],
+		b2Vec2(innerX  / SCALE, 460.0f / SCALE), world, 1.0f, 0.5f, 0.3f, 0));
+
 
     int activeBird = 0; //Index of the current active bird in sling
     
